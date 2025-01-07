@@ -19,6 +19,7 @@ function Feature() {
 
     const settings = {
         dots: true,
+        arrows: false, 
         infinite: false, // Disable infinite scrolling for better control
         speed: 500,
         slidesToShow: 4,
@@ -61,17 +62,17 @@ function Feature() {
             </div>
 
           
-            <div className="flex h-[40px] bg-slate-200 mb-6">
-                <div className="h-full bg-blue-700 text-white px-4 flex justify-center items-center font-semibold">
+            <div className="flex h-[40px] bg-slate-200 mb-6 ">
+                <div className="h-full bg-blue-700 text-white px-4 flex justify-center items-center font-semibold text-[11px] md:text-[15px]">
                     TOP CATEGORIES
                 </div>
-                <div className="h-full flex justify-center items-center px-3 border-[0.5px] border-slate-300">
+                <div className="h-full flex justify-center items-center px-3 border-[0.5px] border-slate-300 text-[11px] md:text-[15px]">
                     ELECTRONICS
                 </div>
-                <div className="h-full flex justify-center items-center px-3 border-[0.5px] border-slate-300">
+                <div className="h-full flex justify-center items-center px-3 border-[0.5px] border-slate-300 text-[11px] md:text-[15px]">
                     BEAUTY
                 </div>
-                <div className="h-full hidden sm:flex justify-center items-center px-3 border-[0.5px] border-slate-300 ">
+                <div className="h-full hidden sm:flex justify-center items-center px-3 border-[0.5px] border-slate-300 text-[11px] md:text-[15px] ">
                     FASHION
                 </div>
             </div>

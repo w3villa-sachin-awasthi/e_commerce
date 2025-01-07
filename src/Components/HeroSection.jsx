@@ -8,26 +8,31 @@ function HeroSection() {
     return (
         <div className="flex flex-col lg:flex-row items-center bg-base-200 justify-between px-4 bg-slate-50 w-full my-[30px] lg:max-h-[550px] relative overflow-hidden max-w-[1600px] mx-auto">
           
-            <div
-                className="hero lg:min-h-screen min-h-[500px]  w-full lg:max-w-[70%]  mb-4 lg:mb-0 rounded-xl "
-                style={{
-                    backgroundImage: `url(${img1})`,
-                }}
-            >
-                <div className="absolute left-4 text-white">
-               
-                    <div className="ml-10">
-                    <button className="btn btn-primary font-normal text-[1.4em] p-3">Mobile</button>
-                        <h1 className="mb-5 text-5xl font-bold mt-8">Best mobile options</h1>
-                        <h1 className="mb-5 text-5xl font-bold leading-3 ">at any resolution</h1>
-                    <button className='bg-none  text-[23px] py-2 px-3 border-[1px] border-slate-100 mt-10 flex justify-center items-center'>
-                        <div className='mr-3'>Learn more</div> <FaArrowRightLong/>
-                    </button>
-                       
-                  
-                </div>
-                </div>
-            </div>
+          <div
+    className="hero lg:min-h-screen min-h-[500px] w-full lg:max-w-[70%] mb-4 lg:mb-0 rounded-xl relative"
+    style={{
+        backgroundImage: `url(${img1})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+    }}
+>
+    <div className="absolute left-4 top-2/4 md:left-10 lg:left-16 text-white px-4 sm:px-0">
+        <button className="btn btn-primary font-normal text-[0.8em] md:text-[1.2em] lg:text-[1.2em] p-1  sm:p-2 md:p-3">
+            Mobile
+        </button>
+        <h1 className="mt-6 text-xl sm:text-3xl md:text-4xl lg:text-4xl font-bold leading-tight ">
+            Best mobile options
+        </h1>
+        <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-4xl font-bold leading-tight mt-2">
+            at any resolution
+        </h1>
+        <button className="bg-none text-[16px] sm:text-[20px] md:text-[23px] py-2 px-3 border-[1px] border-slate-100 mt-6 flex justify-center items-center">
+            <div className="mr-3">Learn more</div>
+            <FaArrowRightLong />
+        </button>
+    </div>
+</div>
+
 
            
             <div className="w-full lg:w-[30%] flex flex-row bg-slate-50 lg:flex-col h-full justify-around gap-4">
