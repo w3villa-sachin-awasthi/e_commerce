@@ -8,7 +8,7 @@ function Component4() {
   return (
     <div className="bg-slate-800 w-full">
       <div className="max-w-[1600px] mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 text-white py-6 px-4">
-        {/* Free Shipping */}
+       
         <div className="flex items-center">
           <div className="text-[30px] lg:text-[37px] border-2 border-blue-600 h-[70px] w-[70px] rounded-full flex justify-center items-center text-orange-700 mr-3">
             <TbTruckDelivery />
@@ -19,7 +19,7 @@ function Component4() {
           </div>
         </div>
 
-        {/* Free Returns */}
+       
         <div className="flex items-center">
           <div className="text-[30px] lg:text-[37px] border-2 border-blue-600 h-[70px] w-[70px] rounded-full flex justify-center items-center text-orange-700 mr-3">
             <GiReturnArrow />
@@ -30,7 +30,7 @@ function Component4() {
           </div>
         </div>
 
-        {/* Secure Shopping */}
+       
         <div className="flex items-center">
           <div className="text-[30px] lg:text-[37px] border-2 border-blue-600 h-[70px] w-[70px] rounded-full flex justify-center items-center text-orange-700 mr-3">
             <RiSecurePaymentLine />
@@ -41,7 +41,7 @@ function Component4() {
           </div>
         </div>
 
-        {/* Unlimited Blocks */}
+      
         <div className="flex items-center">
           <div className="text-[30px] lg:text-[37px] border-2 border-blue-600 h-[70px] w-[70px] rounded-full flex justify-center items-center text-orange-700 mr-3">
             <SiCodeblocks />

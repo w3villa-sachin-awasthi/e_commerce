@@ -52,7 +52,7 @@ function Feature() {
 
     return (
         <div className="flex flex-col items-center max-w-[1600px] mx-auto my-10">
-            {/* Header Section */}
+           
             <div className="text-[30] sm:text-[47px] xl:text-[43px] font-semibold">Why buy from us?</div>
             <div className="h-[2px] w-[120px] bg-orange-600 my-2"></div>
             <div className="w-[70%] text-center text-slate-500 mb-6">
@@ -60,7 +60,7 @@ function Feature() {
                 Journal is the best Opencart theme framework on the market today. <span className="text-blue-800 underline">Learn more</span>
             </div>
 
-            {/* Categories Section */}
+          
             <div className="flex h-[40px] bg-slate-200 mb-6">
                 <div className="h-full bg-blue-700 text-white px-4 flex justify-center items-center font-semibold">
                     TOP CATEGORIES
@@ -76,8 +76,8 @@ function Feature() {
                 </div>
             </div>
 
-            {/* Slider Section */}
-            <div className="w-[90%]  text-center"> {/* Add padding for better alignment */}
+           
+            <div className="w-[90%]  text-center"> 
                 <Slider {...settings}>
                     {data.map((val, index) => (
                         <div

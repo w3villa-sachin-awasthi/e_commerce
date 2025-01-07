@@ -7,7 +7,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 function HeroSection() {
     return (
         <div className="flex flex-col lg:flex-row items-center bg-base-200 justify-between px-4 w-full my-[30px] lg:max-h-[550px] relative overflow-hidden max-w-[1600px] mx-auto">
-            {/* Hero Section */}
+          
             <div
                 className="hero lg:min-h-screen min-h-[500px]  w-full lg:max-w-[70%]  mb-4 lg:mb-0 rounded-xl"
                 style={{
@@ -29,7 +29,7 @@ function HeroSection() {
                 </div>
             </div>
 
-            {/* Card Section */}
+           
             <div className="w-full lg:w-[30%] flex flex-row lg:flex-col h-full justify-around gap-4">
                 {/* Card 1 */}
                 <div className="card card-side bg-base-100 shadow-xl max-h-[270px] w-full lg:w-auto">
