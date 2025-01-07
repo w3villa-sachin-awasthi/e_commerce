@@ -8,7 +8,7 @@ function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="flex items-center bg-base-200 h-[60px] justify-between px-4 my-4">
+        <div className="flex items-center bg-base-200 h-[60px] justify-between px-4 my-4 max-w-[1600px]  mx-auto">
            
             <div className="w-auto font-semibold text-[24px] sm:text-[32px] uppercase">
                 Journal
