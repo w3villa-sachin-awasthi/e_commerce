@@ -8,7 +8,7 @@ function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="flex items-center bg-base-200 h-[60px] justify-between px-4 my-4 max-w-[1600px]  mx-auto">
+        <div className="flex items-center bg-base-200 h-[60px] justify-between px-4  max-w-[1600px]  mx-auto bg-slate-50">
            
             <div className="w-auto font-semibold text-[24px] sm:text-[32px] uppercase">
                 Journal
@@ -32,7 +32,7 @@ function Header() {
                         <input
                             type="text"
                             placeholder="Search here..."
-                            className="rounded-none w-[100%]"
+                            className="rounded-none w-[100%] bg-slate-50"
                         />
                     </li>
                     <li className="bg-blue-700 flex justify-center items-center">

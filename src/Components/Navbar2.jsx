@@ -7,7 +7,7 @@ function Navbar2() {
 
     return (
         <div className="bg-blue-600 w-full my-6 box-border">
-        <div className='hidden md:flex items-center  h-[50px] justify-between  my-4 w-[100%]  text-white text-[18px] max-w-[1600px]  mx-auto py-10 my-10'>
+        <div className='hidden md:flex items-center  h-[50px] justify-between  my-4 w-[100%]  text-white text-[18px] max-w-[1600px]  mx-auto  my-10'>
             <div className='flex  justify-between item center  h-[100%] '>
                 <div className='flex items-center hover:bg-yellow-500 h-[100%] px-8  indicator bg-yellow-500' >
                     <span className="indicator-item badge right bg-orange-600 border-0 text-white rounded-none ">Sale</span>

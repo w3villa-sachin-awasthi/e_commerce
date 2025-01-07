@@ -6,10 +6,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 function HeroSection() {
     return (
-        <div className="flex flex-col lg:flex-row items-center bg-base-200 justify-between px-4 w-full my-[30px] lg:max-h-[550px] relative overflow-hidden max-w-[1600px] mx-auto">
+        <div className="flex flex-col lg:flex-row items-center bg-base-200 justify-between px-4 bg-slate-50 w-full my-[30px] lg:max-h-[550px] relative overflow-hidden max-w-[1600px] mx-auto">
           
             <div
-                className="hero lg:min-h-screen min-h-[500px]  w-full lg:max-w-[70%]  mb-4 lg:mb-0 rounded-xl"
+                className="hero lg:min-h-screen min-h-[500px]  w-full lg:max-w-[70%]  mb-4 lg:mb-0 rounded-xl "
                 style={{
                     backgroundImage: `url(${img1})`,
                 }}
@@ -30,9 +30,9 @@ function HeroSection() {
             </div>
 
            
-            <div className="w-full lg:w-[30%] flex flex-row lg:flex-col h-full justify-around gap-4">
+            <div className="w-full lg:w-[30%] flex flex-row bg-slate-50 lg:flex-col h-full justify-around gap-4">
                 {/* Card 1 */}
-                <div className="card card-side bg-base-100 shadow-xl max-h-[270px] w-full lg:w-auto">
+                <div className="card card-side bg-base-100 shadow-xl bg-slate-50 max-h-[270px] w-full lg:w-auto">
                     <div className="card-body">
                         <div className='text-blue-700 uppercase'>wearables</div>
                         <div>Intelligent</div>
@@ -45,7 +45,7 @@ function HeroSection() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="card card-side bg-base-100 shadow-xl max-h-[270px] w-full lg:w-auto">
+                <div className="card card-side bg-base-100 bg-slate-50 shadow-xl max-h-[270px] w-full lg:w-auto">
                     <div className="card-body">
                        <div className='text-blue-700 uppercase'>computers</div>
                        <div>Build your</div>

@@ -7,7 +7,7 @@ import CategorySection from './Components/CategorySection';
 import Feature from './Components/Feature';
 function App() {
   return (
-    <div className='min-h-screen p-0 m-0 box-border  bg-slate-50  '>
+    <div className='min-h-screen p-0 m-0 box-border  bg-slate-50 w-full text-slate-950  '>
      <Header></Header>
      <Navbar2/>
      <HeroSection/>
