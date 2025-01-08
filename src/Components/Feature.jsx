@@ -78,24 +78,28 @@ function Feature() {
             </div>
 
            
-            <div className="w-[90%]  text-center"> 
-                <Slider {...settings}>
-                    {data.map((val, index) => (
-                        <div
-                            key={index}
-                            className="bg-cover bg-center h-[250px] max-w-[250px] min-w-[250px] flex items-center justify-center text-white text-xl font-bold mx-4 relative mx-6"
-                            
-                        >
-                            <img src={val.img} alt="" className='overflow-hidden h-[100%] rounded-xl' />
-                            <div className='w-[100%] absolute bottom-2 text-center'>
-                            <span className="bg-black bg-opacity-50 px-4 py-2 rounded ">{val.content}</span>
-                            </div>
-                           
-                        </div>
-                    ))}
-                </Slider>
-            </div>
-            
+            <div className="w-[90%] text-center">
+  <Slider {...settings}>
+    {data.map((val, index) => (
+      <div
+        key={index}
+        className="bg-cover bg-center h-[250px] max-w-[250px] min-w-[250px] flex items-center justify-center text-white text-xl font-bold  relative mx-6 my-6" 
+      >
+        
+        <img
+          src={val.img}
+          alt=""
+          className="overflow-hidden h-[100%] w-full rounded-xl mx-auto object-cover"
+          style={{ objectPosition: "80% 100%" }}
+        />
+        <div className="w-[100%] absolute bottom-2 text-center">
+          <span className="bg-slate-300 text-black bg-opacity-80 px-4 py-2 rounded">{val.content}</span>
+        </div>
+      </div>
+    ))}
+  </Slider>
+</div>
+
         </div>
     );
 }

@@ -105,7 +105,7 @@ function FeaturedCatergory() {
     {data.map((val, index) => (
         <div
             key={index}
-            className="bg-cover bg-center max-w-[170px] min-w-[170px] sm:max-w-[270px] sm:min-w-[270px] flex pb-10 text-xl font-bold mx-4 relative shadow-lg shadow-slate-400"
+            className="bg-cover bg-center max-w-[170px] min-w-[170px] sm:max-w-[270px] sm:min-w-[270px] flex pb-10 text-xl font-bold mx-4 relative shadow-lg shadow-slate-400 mb-10"
         >
             <img src={val.img} alt="" className="overflow-hidden h-[170px] sm:h-[250px] mx-auto" />
             {/* Content */}

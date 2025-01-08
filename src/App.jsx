@@ -9,6 +9,10 @@ import FeaturedCatergory from './Components/FeaturedCatergory';
 import Brand from './Components/Brand';
 import Gallery from './Components/Gallery';
 import Blog from './Components/Blog';
+import People from './Components/People';
+import Viewed from './Components/Viewed';
+import Social from './Components/Social';
+import Footer from './Components/Footer';
 function App() {
   return (
     <div className='min-h-screen p-0 m-0 box-border  bg-slate-50 w-full text-slate-950  '>
@@ -23,6 +27,10 @@ function App() {
      <Brand/>
      <Gallery/>
      <Blog/>
+     <People/>
+     <Viewed/>
+     <Social/>
+     <Footer/>
     </div>
   )
 }
