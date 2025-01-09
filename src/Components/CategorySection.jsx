@@ -53,7 +53,7 @@ function CategorySection() {
     };
 
     return (
-        <div className="flex flex-col md:items-center max-w-[1600px] mx-auto my-10 px-5">
+        <div className="flex flex-col md:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10">
             <div className="text-[30] sm:text-[47px] xl:text-[43px] font-semibold">Featured Products</div>
             <div className="h-[2px] w-[60px] md:w-[120px] bg-orange-600 my-2"></div>
             <div className="w-[70%] md:text-center text-slate-500 mb-6">
@@ -79,11 +79,11 @@ function CategorySection() {
 
 
 
-            <div className="w-[90%]  text-center ">
+            <div className="w-[100%]   text-center  ">
                 <Slider {...settings}>
                     <div
 
-                        className="bg-cover bg-center  max-w-[270px] min-w-[270px] flex    text-xl font-bold mx-4 relative mx-6 shadow-lg shadow-slate-400 relative overflow-hidden"
+className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 " 
 
                     >
                         <div className="absolute top-[34px] left-[-50px] text-[14px] bg-blue-700 text-white text-center uppercase w-[200px] " style={{ transform: "rotate(-45deg)" }} >
@@ -97,7 +97,10 @@ function CategorySection() {
                                 Hot
                             </div>
                         </div>
-                        <img src={image1} alt="" className='overflow-hidden h-[100%] h-[250px] ' />
+
+                      <div lassName='overflow-hidden h-[100%] sm:h-[250px] '>
+                      <img src={image1} alt="" className='overflow-hidden h-[100%] w-[100%] h-full object-cover' />
+                      </div> 
                         <div className='flex justify-between bg-slate-200 py-2 font-light text-[15px] px-1'>
                             <div>Erickson</div>
                             <div>Model 519</div>
@@ -131,7 +134,7 @@ function CategorySection() {
                     </div>
                     <div
 
-                        className="bg-cover bg-center  max-w-[270px] min-w-[270px] flex    text-xl font-bold mx-4 relative mx-6 shadow-lg shadow-slate-400 overflow-hidden"
+className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 " 
 
                     >
                         <div className="absolute top-[34px] left-[-50px] text-[14px] bg-red-600 text-white text-center uppercase w-[200px] " style={{ transform: "rotate(-45deg)" }} >
@@ -143,8 +146,9 @@ function CategorySection() {
                             </div>
                            
                         </div>
-                        <img src={image2} alt="" className='overflow-hidden h-[100%] h-[250px] ' />
-                        <div className='flex justify-between bg-slate-200 py-2 font-light text-[15px] px-1'>
+                        <div lassName='overflow-hidden h-[100%] sm:h-[250px] '>
+                      <img src={image2} alt="" className='overflow-hidden h-[100%] w-[100%] h-full object-cover' />
+                      </div>                         <div className='flex justify-between bg-slate-200 py-2 font-light text-[15px] px-1'>
                             <div>Erickson</div>
                             <div>Model 519</div>
                         </div>
@@ -177,7 +181,7 @@ function CategorySection() {
                     </div>
                     <div
 
-                        className="bg-cover bg-center  max-w-[270px] min-w-[270px] flex    text-xl font-bold mx-4 relative mx-6 shadow-lg shadow-slate-400 overflow-hidden"
+className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 " 
 
                     >
                          <div className="absolute top-[10px] left-[-70px] text-[14px] h-[25px] flex justify-center bg-green-600 text-white text-center uppercase w-[200px] " style={{ transform: "rotate(-45deg)" }} >
@@ -186,8 +190,9 @@ function CategorySection() {
                         <div className="absolute top-[34px] left-[-50px] text-[14px] bg-red-600 text-white text-center uppercase w-[200px] " style={{ transform: "rotate(-45deg)" }} >
                             Pre-order
                         </div>
-                        <img src={image1} alt="" className='overflow-hidden h-[100%] h-[250px] ' />
-                        <div className='flex justify-between bg-slate-200 py-2 font-light text-[15px] px-1'>
+                        <div lassName='overflow-hidden h-[100%] sm:h-[250px] '>
+                      <img src={image3} alt="" className='overflow-hidden h-[100%] w-[100%] h-full object-cover' />
+                      </div>                         <div className='flex justify-between bg-slate-200 py-2 font-light text-[15px] px-1'>
                             <div>Erickson</div>
                             <div>Model 519</div>
                         </div>
@@ -218,9 +223,9 @@ function CategorySection() {
                             </div>
                         </div>
                     </div>
-                    <div
+                    {/* <div
 
-                        className="bg-cover bg-center  max-w-[270px] min-w-[270px] flex    text-xl font-bold mx-4 relative mx-6 shadow-lg shadow-slate-400 overflow-hidden"
+className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 " 
 
                     > 
                      <div className="absolute top-[34px] left-[-50px] text-[14px] bg-red-600 text-white text-center uppercase w-[200px] " style={{ transform: "rotate(-45deg)" }} >
@@ -263,10 +268,10 @@ function CategorySection() {
                                 <div className='text-red-800 text-[1.2em] mr-1'><FaRegQuestionCircle /></div> Question
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div
 
-                        className="bg-cover bg-center  max-w-[270px] min-w-[270px] flex    text-xl font-bold mx-4 relative mx-6 shadow-lg shadow-slate-400 overflow-hidden"
+className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 " 
 
                     >
                          <div className="absolute top-[34px] left-[-50px] text-[14px] bg-red-600 text-white text-center uppercase w-[200px] " style={{ transform: "rotate(-45deg)" }} >
@@ -278,8 +283,9 @@ function CategorySection() {
                                 Hot
                             </div>
                         </div>
-                        <img src={image4} alt="" className='overflow-hidden h-[100%] h-[250px] ' />
-                        <div className='flex justify-between bg-slate-200 py-2 font-light text-[15px] px-1'>
+                        <div lassName='overflow-hidden h-[100%] sm:h-[250px] '>
+                      <img src={image4} alt="" className='overflow-hidden h-[100%] w-[100%] h-full object-cover' />
+                      </div>                         <div className='flex justify-between bg-slate-200 py-2 font-light text-[15px] px-1'>
                             <div>Erickson</div>
                             <div>Model 519</div>
                         </div>
@@ -312,7 +318,7 @@ function CategorySection() {
                     </div>
                     <div
 
-                        className="bg-cover bg-center  max-w-[270px] min-w-[270px] flex    text-xl font-bold mx-4 relative mx-6 shadow-lg shadow-slate-400 overflow-hidden"
+className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 " 
 
                     >
                   <div className="absolute top-[34px] left-[-50px] text-[14px] bg-red-600 text-white text-center uppercase w-[200px] " style={{ transform: "rotate(-45deg)" }} >
@@ -324,8 +330,9 @@ function CategorySection() {
                                 -50%
                             </div>
                         </div>
-                        <img src={image5} alt="" className='overflow-hidden h-[100%] h-[250px] ' />
-                        <div className='flex justify-between bg-slate-200 py-2 font-light text-[15px] px-1'>
+                        <div lassName='overflow-hidden h-[100%] sm:h-[250px] '>
+                      <img src={image5} alt="" className='overflow-hidden h-[100%] w-[100%] h-full object-cover' />
+                      </div>                         <div className='flex justify-between bg-slate-200 py-2 font-light text-[15px] px-1'>
                             <div>Erickson</div>
                             <div>Model 519</div>
                         </div>

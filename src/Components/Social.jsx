@@ -18,9 +18,9 @@ function Viewed() {
     ]
     return (
      
-            <div className='max-w-[1600px] w-[100%] mx-auto flex justify-center'>
+            <div className='max-w-[1600px] w-[100%] mx-auto flex justify-center px-3 md:px-5 lg:px-7 2xl:px-10'>
                {
-                arr.map((val,ind)=><div className='h-[40px] w-[40px] bg-blue-700 text-white rounded-[50%] flex justify-center items-center mx-1 my-5'>
+                arr.map((val,ind)=><div className='h-[33px] w-[33px] sm:h-[40px] sm:w-[40px] bg-blue-700 text-white rounded-[50%] flex justify-center items-center mx-1 my-5'>
                     {val}
                 </div>)
                }

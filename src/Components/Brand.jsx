@@ -50,46 +50,46 @@ function Brand() {
             {
                 breakpoint: 1500, // For tablets
                 settings: {
+                    slidesToShow: 8,
+                    slidesToScroll: 1,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 1250, // For tablets
+                settings: {
                     slidesToShow: 7,
                     slidesToScroll: 1,
                     dots: true,
                 },
             },
             {
-                breakpoint: 1220, // For tablets
+                breakpoint: 1100, // For tablets
                 settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
-                    dots: true,
-                },
-            },
-            {
-                breakpoint: 950, // For tablets
-                settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 6,
                     slidesToScroll: 1,
                     dots: true,
                 },
             },
            
             {
-                breakpoint: 620, // For small devices
+                breakpoint: 900, // For small devices
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 770, // For small devices
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 630, // For small devices
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 420, // For small devices
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 370, // For small devices
-                settings: {
-                    slidesToShow: 1,
                     slidesToScroll: 1,
                 },
             }
@@ -97,22 +97,27 @@ function Brand() {
     };
 
     return (
-        <div className="flex flex-col items-center max-w-[1600px] mx-auto my-14">
+        <div className=" max-w-[1600px] mx-auto my-14 px-3 md:px-5 lg:px-7 2xl:px-10">
 
-            <div className="text-[30] sm:text-[32px] xl:text-[43px] font-semibold">Shop by Brand</div>
-            <div className="h-[2px] w-[120px] bg-orange-600 my-2"></div>
           
+        
+        
+          
+          <div className='flex sm:items-center items-start flex-col'>
+          <div className="text-[30] sm:text-[32px] xl:text-[43px] font-semibold">Shop by Brand</div>
+          <div className="h-[1.5px] w-[60px] sm:w-[120px] bg-orange-600 my-2"></div>
+          </div>
 
 
          
 
 
-            <div className="w-[90%]  text-center mt-9">
+            <div className=" mt-9  w-full  h-[160px] sm:h-[240px]">
                 <Slider {...settings}>
                     {data.map((val, index) => (
                         <div
                             key={index}
-                            className="bg-cover bg-center  max-w-[140px] sm:min-w-[140px] sm:max-w-[120px] min-w-[120px] flex    text-xl font-bold mx-4 relative mx-6 shadow-md rounded-xl shadow-slate-400"
+                            className="bg-cover  object-cover bg-center  max-w-[140px] sm:min-w-[140px] sm:max-w-[120px] min-w-[95%] max-w-[95%] flex    text-xl font-bold  relative  shadow-md rounded-xl shadow-slate-400"
 
                         >
 
@@ -123,11 +128,7 @@ function Brand() {
                     ))}
                 </Slider>
             </div>
-          <div className='w-full flex justify-center my-10'>
-           <button className='uppercase bg-blue-600 text-white text-[0.8em] px-3 py-2 flex items-center rounded-sm'>
-            see all products <span className='ml-2'><BsArrowRight/></span>
-           </button>
-          </div>
+        
         </div>
     );
 }

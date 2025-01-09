@@ -12,7 +12,7 @@ import { FaRegCheckCircle } from "react-icons/fa";
 
 function Info() {
     return (
-        <div className='max-w-[1600px] mx-auto flex justify-between items-center h-[35px] bg-blue-600 md:bg-slate-50 text-slate-500 text-[11px] px-5'>
+        <div className='max-w-[1600px] mx-auto flex justify-between items-center h-[35px] bg-blue-600 md:bg-slate-50 text-slate-500 text-[11px]  px-3 md:px-5 lg:px-7 2xl:p-10 '>
             <div className='flex justify-between w-full md:hidden  text-white'>
                 <div className='flex justify-center'>
                 <div className='flex items-center mx-2'>

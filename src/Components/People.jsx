@@ -60,22 +60,22 @@ function People() {
     };
 
     return (
-        <div className="flex flex-col items-center max-w-[1600px] mx-auto my-14 py-10">
-
-            <div className="text-[30] sm:text-[37px] xl:text-[43px] font-semibold text-center" >What are people saying about us</div>
-            <div className="h-[2px] w-[120px] bg-orange-600 my-2"></div>
-
-
+        <div className="flex flex-col sm:items-center max-w-[1600px] mx-auto my-5 py-10 px-3 md:px-5 lg:px-7 2xl:px-10">
+         
+            <div className="text-[17px] sm:text-[37px] xl:text-[43px] font-semibold " >What are people saying about us</div>
+            <div className="h-[2px] w-[60px] sm:w-[120px] bg-orange-600 my-2"></div>
 
 
 
 
-            <div className="w-full text-center mt-10 ">
+
+
+            <div className="w-full text-center mt-4 ">
                 <Slider {...settings}>
                     {data.map((val, index) => (
                         <div
                             key={index}
-                            className="bg-cover bg-center max-w-[90%] md:max-w-[330px] lg:max-w-[380]  xl:max-w-[420px] min-w-[220px] flex text-xl font-bold  sm:mx-4 relative shadow-sm shadow-slate-200 pb-10 mx-2 my-4 pt-10"
+                            className="bg-cover bg-center max-w-[90%] md:max-w-[330px] lg:max-w-[380]  xl:max-w-[420px] min-w-[220px] flex text-xl font-bold  sm:mx-4 relative shadow-sm shadow-slate-200 pb-5 mx-2 my-2 pt-5"
                         >
 
                             <div className='w-full flex justify-center text-orange-600 text-[60px]'>

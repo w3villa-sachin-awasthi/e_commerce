@@ -9,7 +9,7 @@ function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="flex items-center  h-[60px] justify-between px-4  max-w-[1600px]  mx-auto bg-slate-50 pt-7">
+        <div className="flex items-center  h-[60px] justify-between   max-w-[1600px]  mx-auto bg-slate-50 pt-7  px-3 md:px-5 lg:px-7 2xl:p-10 ">
            
             <div className="w-auto font-extrabold text-[24px] sm:text-[32px] uppercase">
                 Journal
@@ -32,7 +32,7 @@ function Header() {
                             </ul>
                         </details> */}
                     </li>
-                    <li className="w-[80%]">
+                    <li className="w-[70%]">
                         <input
                             type="text"
                             placeholder="Search here..."

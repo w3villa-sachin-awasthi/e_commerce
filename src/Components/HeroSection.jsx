@@ -6,10 +6,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 function HeroSection() {
   return (
-    <div className="flex flex-col lg:flex-row items-center  lg:max-h-[500px] justify-between px-4 bg-slate-50 w-full   relative overflow-hidden max-w-[1600px] mx-auto my-[50px]">
+    <div className="flex flex-col lg:flex-row items-center  lg:max-h-[500px] justify-between px-4 bg-slate-50 w-full   relative overflow-hidden max-w-[1600px] mx-auto my-[50px] px-3 md:px-5 lg:px-7 2xl:p-10 ">
       {/* Hero Section */}
       <div
-        className="hero lg:min-h-screen min-h-[500px] w-full lg:max-w-[70%] mb-4 lg:mb-0 rounded-xl relative  overflow-hidden"
+        className="hero lg:min-h-screen min-h-[500px] w-full lg:max-w-[70%] mb-4 lg:mb-0 rounded-xl relative  overflow-hidden flex-1 shrink"
         style={{
           backgroundImage: `url(${img1})`,
           backgroundSize: "cover",
@@ -34,37 +34,37 @@ function HeroSection() {
       </div>
 
       {/* Card Section */}
-      <div className="w-full lg:w-[30%] flex flex-row lg:flex-col lg:h-auto h-full bg-slate-50 justify-between gap-4 lg:gap-6 lg:py-4 ">
+      <div className="w-full lg:w-[465px] flex flex-row lg:flex-col lg:h-auto h-full bg-slate-50 justify-between gap-4 lg:gap-6 lg:py-4 shrink-0">
         {/* Card 1 */}
-        <div className="w-[46%] lg:w-full shadow-xl bg-slate-50 rounded-xl flex items-center">
-          <div className="card-body w-[50%]">
-            <div className="text-blue-700 uppercase font-bold">wearables</div>
+
+        <div className="w-[48%] lg:w-full h-[140px] md:h-auto shadow-xl bg-slate-50 rounded-xl flex items-center text-[1em]">
+          <div className="h-full text-[9px] leading-[10px] sm:leading-[22px] sm:text-[14px] md:text-[20px] w-[50%]  flex justify-center flex-col items-start px-[5px] sm:px-[30px]">
+            <div className="text-blue-700 uppercase font-bold  ">wearables</div>
             <div>Intelligent</div>
             <div>& Durable</div>
             <div>Design</div>
           </div>
-          <figure className="w-1/2">
+          <figure className="w-1/2 h-full py-3">
             <img
               src={img2}
               alt="Wearables"
-              className="h-full w-full object-cover rounded-xl"
+              className="h-full w-full object-cover object-left-[] rounded-xl"
             />
           </figure>
         </div>
 
-        {/* Card 2 */}
-        <div className="w-[46%] lg:w-full  shadow-xl bg-slate-50 rounded-xl flex items-center">
-          <div className="card-body">
-            <div className="text-blue-700 uppercase font-bold">computers</div>
+        <div className="w-[48%] lg:w-full h-[140px] md:h-auto shadow-xl bg-slate-50 rounded-xl flex items-center text-[1em]">
+          <div className="h-full text-[9px] leading-[10px] sm:leading-[22px] sm:text-[14px] md:text-[20px] w-[50%]  flex justify-center flex-col items-start px-[5px] sm:px-[30px] ">
+            <div className="text-blue-700 uppercase font-bold ">computers</div>
             <div>Build your</div>
             <div>own high</div>
             <div>powered</div>
           </div>
-          <figure className="w-1/2 object-cover object-center">
+          <figure className="w-1/2 h-full py-3">
             <img
               src={img3}
-              alt="Computers"
-              className="h-full w-full object-cover rounded-xl"
+              alt="Wearables"
+              className="h-full w-full object-cover object-left-[] rounded-xl"
             />
           </figure>
         </div>

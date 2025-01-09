@@ -31,7 +31,7 @@ function Blog() {
     const settings = {
         dots: true,
         arrows: false,
-        infinite: false, // Disable infinite scrolling for better control
+        infinite: true, // Disable infinite scrolling for better control
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1, // Scroll one slide at a time for better user experience
@@ -63,33 +63,24 @@ function Blog() {
     };
 
     return (
-        <div className="flex flex-col items-center max-w-[1600px] mx-auto my-10  pb-10">
-
-            <div className="text-[30] sm:text-[47px] xl:text-[43px] font-semibold">From our Blog</div>
-            <div className="h-[2px] w-[120px] bg-orange-600 my-2"></div>
-            <div className="w-[70%] text-center text-slate-500 mb-6">
-                Journal comes with its own simple yet powerful blog. With the new advnced typography styles your post page design will be unmatched
-
+        <div className="flex flex-col md:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10">
+                   <div className="text-[30] sm:text-[47px] xl:text-[43px] font-semibold">From our Blog</div>
+            <div className="h-[2px] w-[60px] md:w-[120px] bg-orange-600 my-2"></div>
+            <div className="w-[90%] leading-5 sm:leading-6 sm:w-[70%] md:text-center text-slate-500 mb-6">
+            Journal comes with its own simple yet powerful blog. With the new advnced typography styles your post page design will be unmatched
             </div>
 
+       
 
-            <div className="flex h-[40px] bg-slate-200 mb-6">
-                <div className="h-full uppercase bg-blue-700 text-white px-4 flex justify-center items-center font-semibold text-[11px] md:text-[15px]">
-                    Latest post
-                </div>
-                <div className="h-full uppercase flex justify-center items-center px-3 border-[0.5px] border-slate-300 text-[11px] md:text-[15px]">
-                    Most read
-                </div>
-
-            </div>
+         
 
 
-            <div className="w-full text-center  px-5">
+            <div className="w-full text-center  ">
                 <Slider {...settings}>
                     {data.map((val, index) => (
                         <div
                             key={index}
-                            className="bg-cover bg-center h-auto max-w-[100%] md:max-w-[330px] lg:max-w-[380px]  xl:max-w-[440px] min-w-[220px] flex flex-wrap text-xl font-bold  sm:mx-4 relative shadow-sm shadow-slate-200 pb-10  my-4 overflow-hidden "
+                            className="bg-cover bg-center h-auto max-w-[100%] md:max-w-[330px] lg:max-w-[380px]  xl:max-w-[440px] min-w-[220px] flex flex-wrap text-xl font-bold  sm:mx-4 relative shadow-sm shadow-slate-200 pb-10   my-4 overflow-hidden "
                         >
                             <div className="relative w-full">
                                 <img src={val.img} alt="" className="overflow-hidden w-full rounded-t-xl" />
