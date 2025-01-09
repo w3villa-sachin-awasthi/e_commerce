@@ -63,7 +63,7 @@ function Blog() {
     };
 
     return (
-        <div className="flex flex-col items-center max-w-[1600px] mx-auto my-14 pb-10">
+        <div className="flex flex-col items-center max-w-[1600px] mx-auto my-10  pb-10">
 
             <div className="text-[30] sm:text-[47px] xl:text-[43px] font-semibold">From our Blog</div>
             <div className="h-[2px] w-[120px] bg-orange-600 my-2"></div>
@@ -84,18 +84,18 @@ function Blog() {
             </div>
 
 
-            <div className="w-full text-center  ">
+            <div className="w-full text-center  px-5">
                 <Slider {...settings}>
                     {data.map((val, index) => (
                         <div
                             key={index}
-                            className="bg-cover bg-center h-auto max-w-[90%] md:max-w-[330px] lg:max-w-[380]  xl:max-w-[420px] min-w-[220px] flex text-xl font-bold  sm:mx-4 relative shadow-lg shadow-slate-400 pb-10 mx-2 my-4"
+                            className="bg-cover bg-center h-auto max-w-[100%] md:max-w-[330px] lg:max-w-[380px]  xl:max-w-[440px] min-w-[220px] flex flex-wrap text-xl font-bold  sm:mx-4 relative shadow-sm shadow-slate-200 pb-10  my-4 overflow-hidden "
                         >
                             <div className="relative w-full">
                                 <img src={val.img} alt="" className="overflow-hidden w-full rounded-t-xl" />
-                                <div className="text-white bg-blue-900 absolute leading-4 px-2 py-1 sm:px-4 sm:py-2 rounded-md text-[10px] sm:text-[12px] top-2 left-2">
+                                <div className="text-white bg-blue-900 absolute leading-4 px-2 py-1 sm:px-4 sm:py-2 rounded-md text-[12px] sm:text-[14px] top-2 left-2">
                                     <div>02</div>
-                                    <div className="text-[8px] sm:text-[12px]">Aug</div>
+                                    <div className="text-[8px] sm:text-[10px]">Aug</div>
                                 </div>
                                 <div className="flex justify-center items-center bg-slate-200 py-1 sm:py-2 font-light text-[12px] sm:text-[15px] px-1 absolute bottom-0 w-full opacity-70">
                                     <FaUserAlt className="text-[10px] sm:text-[12px]" />

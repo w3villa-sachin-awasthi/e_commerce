@@ -16,11 +16,11 @@ function Gallery() {
     return (
         <div className='flex justify-center bg-gray-700   text-white '>
             <div className='max-w-[1600px] flex flex-col items-center py-10 '>
-                <div className="text-[30] sm:text-[47px] xl:text-[43px] font-semibold">Featured Products</div>
+                <div className="text-[30] sm:text-[37px] xl:text-[43px] font-semibold">Improved Gallery Module</div>
                 <div className="h-[2px] w-[120px] bg-orange-600 my-2"></div>
-                <div className="w-[70%] text-center text-slate-500 mb-6">
-                    Display any products as tabs or accordions with optional grid or carousal mode. Custom products per row per modules and per breakpoint.
-                    Each module can display products in either grid or list with different styles per module.
+                <div className="w-[80%] text-center text-[12px] text-slate-500 mb-6">
+                     The Gallery module supports images, video and can also acts as banners that can point to say other page or open other Popup modules.
+                     Create different modules with images, videos, banners or a combination of all. Add your modules on any page in any grid format.
 
                 </div>
                 <div className='flex flex-wrap justify-center'>

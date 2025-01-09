@@ -70,12 +70,12 @@ function People() {
 
 
 
-            <div className="w-full text-center  ">
+            <div className="w-full text-center mt-10 ">
                 <Slider {...settings}>
                     {data.map((val, index) => (
                         <div
                             key={index}
-                            className="bg-cover bg-center max-w-[90%] md:max-w-[330px] lg:max-w-[380]  xl:max-w-[420px] min-w-[220px] flex text-xl font-bold  sm:mx-4 relative shadow-lg shadow-slate-400 pb-10 mx-2 my-4 pt-10"
+                            className="bg-cover bg-center max-w-[90%] md:max-w-[330px] lg:max-w-[380]  xl:max-w-[420px] min-w-[220px] flex text-xl font-bold  sm:mx-4 relative shadow-sm shadow-slate-200 pb-10 mx-2 my-4 pt-10"
                         >
 
                             <div className='w-full flex justify-center text-orange-600 text-[60px]'>

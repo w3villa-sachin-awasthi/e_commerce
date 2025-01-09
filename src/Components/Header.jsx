@@ -3,6 +3,7 @@ import { FaSearch, FaUserCircle, FaPen, FaRegHeart } from "react-icons/fa";
 import { RiExchangeLine } from "react-icons/ri";
 import { TiShoppingCart } from "react-icons/ti";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FaCaretDown } from "react-icons/fa";
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ function Header() {
     return (
         <div className="flex items-center  h-[60px] justify-between px-4  max-w-[1600px]  mx-auto bg-slate-50 pt-7">
            
-            <div className="w-auto font-semibold text-[24px] sm:text-[32px] uppercase">
+            <div className="w-auto font-extrabold text-[24px] sm:text-[32px] uppercase">
                 Journal
             </div>
 
@@ -18,21 +19,24 @@ function Header() {
             <div className="hidden xl:flex w-[45%]">
                 <ul className="menu menu-horizontal px-1 box-border w-[100%] flex">
                     <li>
-                        <details>
+                    <summary className="bg-blue-700 text-slate-50 rounded-none py-[9px]">
+                                All <span><FaCaretDown/></span>
+                            </summary>
+                        {/* <details>
                             <summary className="bg-blue-700 text-slate-50 rounded-none">
-                                All
+                                All <span><FaCaretDown/></span>
                             </summary>
                             <ul className="bg-base-100 rounded-t-none p-2">
                                 <li><a href="#">Link 1</a></li>
                                 <li><a href="#">Link 2</a></li>
                             </ul>
-                        </details>
+                        </details> */}
                     </li>
                     <li className="w-[80%]">
                         <input
                             type="text"
                             placeholder="Search here..."
-                            className="rounded-none w-[100%] bg-slate-50"
+                            className="rounded-none w-[100%] bg-slate-50 border-[0.2px] border-slate-300"
                         />
                     </li>
                     <li className="bg-blue-700 flex justify-center items-center">
