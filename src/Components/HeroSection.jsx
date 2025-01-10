@@ -6,7 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 function HeroSection() {
   return (
-    <div className="flex flex-col lg:flex-row items-center  lg:max-h-[500px] justify-between px-4 bg-slate-50 w-full   relative overflow-hidden max-w-[1600px] mx-auto my-[50px] px-3 md:px-5 lg:px-7 2xl:p-10 ">
+    <div className="flex flex-col lg:flex-row items-center  lg:max-h-[500px] justify-between px-4 bg-slate-50 w-full   relative overflow-hidden max-w-[1600px] mx-auto my-[50px] px-3 md:px-5 lg:px-7 2xl:px-10 ">
       {/* Hero Section */}
       <div
         className="hero lg:min-h-screen min-h-[500px] w-full lg:max-w-[70%] mb-4 lg:mb-0 rounded-xl relative  overflow-hidden flex-1 shrink"

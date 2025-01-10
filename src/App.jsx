@@ -14,12 +14,14 @@ import Viewed from './Components/Viewed';
 import Social from './Components/Social';
 import Footer from './Components/Footer';
 import Info from './Components/Info';
+import HeroSection2 from './Components/HeroSection2';
 function App() {
   return (
     <div className='min-h-screen p-0 m-0 box-border  bg-slate-50 w-full text-slate-950  '>
       <Info/>
      <Header></Header>
      <Navbar2/>
+     <HeroSection2/>
      <HeroSection/>
      <Component4/>
      
