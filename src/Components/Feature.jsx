@@ -52,24 +52,25 @@ function Feature() {
     };
 
     return (
-        <div className="flex flex-col items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10 ">
+        <div className="flex flex-col  sm:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10 ">
+            
            
             <div className="text-[30] sm:text-[47px] xl:text-[43px] font-semibold">Why buy from us?</div>
             <div className="h-[2px] w-[120px] bg-orange-600 my-2"></div>
-            <div className="w-[70%] text-center text-slate-500 mb-6">
+            <div className="w-[90%] sm:w-[70%] text-start sm:text-center text-slate-500 mb-6">
                 Journal has been the best selling and most loved Opencart theme since its first launch in 2013. Tried and tested by over 20K people,
                 Journal is the best Opencart theme framework on the market today. <span className="text-blue-800 underline">Learn more</span>
             </div>
 
           
-            <div className="flex h-[40px] bg-slate-200 mb-6 ">
-                <div className="h-full bg-blue-700 text-white px-4 flex justify-center items-center font-semibold text-[11px] md:text-[15px]">
+            <div className="flex h-[40px] bg-slate-200 mb-6  ">
+                <div className="h-full min-w-[180px] sm:w-auto bg-blue-700 text-white px-4 flex justify-center items-center font-semibold text-[11px] md:text-[15px]">
                     TOP CATEGORIES
                 </div>
-                <div className="h-full flex justify-center items-center px-3 border-[0.5px] border-slate-300 text-[11px] md:text-[15px]">
+                <div className="h-full w-1/2 flex justify-center items-center px-3 border-[0.5px] border-slate-300 text-[11px] md:text-[15px]">
                     ELECTRONICS
                 </div>
-                <div className="h-full flex justify-center items-center px-3 border-[0.5px] border-slate-300 text-[11px] md:text-[15px]">
+                <div className="h-full hidden sm:flex justify-center items-center px-3 border-[0.5px] border-slate-300 text-[11px] md:text-[15px]">
                     BEAUTY
                 </div>
                 <div className="h-full hidden sm:flex justify-center items-center px-3 border-[0.5px] border-slate-300 text-[11px] md:text-[15px] ">

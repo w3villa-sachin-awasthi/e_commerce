@@ -32,7 +32,7 @@ function HeroSection() {
           </button>
         </div>
       </div>
-
+       {/* <Temp/> */}
       {/* Card Section */}
       <div className="w-full lg:w-[465px] flex flex-row lg:flex-col lg:h-auto h-full bg-slate-50 justify-between gap-4 lg:gap-6 lg:py-4 shrink-0">
         {/* Card 1 */}

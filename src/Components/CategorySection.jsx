@@ -62,7 +62,7 @@ function CategorySection() {
             </div>
 
 
-            <div className="flex h-[40px] flex-wrap  bg-slate-200 mb-[50px] ">
+            <div className="flex h-[40px]   flex-wrap  bg-slate-200 mb-[50px] ">
                 <div className="h-full w-[50%] sm:w-[33%] md:w-auto bg-blue-700 text-white px-4 flex justify-center items-center font-semibold text-[11px] md:text-[15px]">
                     FEATURES
                 </div>

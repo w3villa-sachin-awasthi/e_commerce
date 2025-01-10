@@ -14,8 +14,8 @@ function Gallery() {
         img1,img2,img3,img4,img5,img6,img7,img8,img9
     ]
     return (
-        <div className='flex justify-center bg-gray-700   text-white px-3 md:px-5 lg:px-7 2xl:px-10'>
-            <div className='max-w-[1600px] flex flex-col items-start sm:items-center py-10 '>
+        <div className='flex justify-center  bg-gray-700   text-white px-3 md:px-5 lg:px-7 2xl:px-10'>
+            <div className='max-w-[1600px] flex flex-col items-start  sm:items-center py-10 '>
                 <div className="text-[30] sm:text-[37px] xl:text-[43px] font-semibold">Improved Gallery Module</div>
                 <div className="h-[2px] w-[60px] sm:w-[120px] bg-orange-600 my-2"></div>
                 <div className="w-[90%] sm:w-[80%] text-start sm:text-center text-[12px] text-slate-500 mb-6">
@@ -23,11 +23,11 @@ function Gallery() {
                      Create different modules with images, videos, banners or a combination of all. Add your modules on any page in any grid format.
 
                 </div>
-                <div className='flex w-[100%] flex-wrap justify-between items-around ' >
+                <div className='flex w-[100%] flex-wrap justify-center items-center  ' >
                  {
 
                   arr.map((val,ind)=><div key={ind}
-                  className='w-[28%] shrink  sm:w-[110px] md:w-[160px] my-1  rounded-lg overflow-hidden'
+                  className='w-[28%] shrink  sm:w-[110px] md:w-[160px] m-1  rounded-lg overflow-hidden'
                   > 
                    <img src={val} alt="" />
                   </div>)
