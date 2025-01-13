@@ -36,7 +36,7 @@ function App() {
      <Viewed/>
      <Social/>
      <Footer/>
-     {/* <Payment/> */}
+     <Payment/>
     </div>
   )
 }
