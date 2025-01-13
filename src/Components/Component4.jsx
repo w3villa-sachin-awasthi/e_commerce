@@ -33,7 +33,7 @@ function Component4() {
 
         {
           arr.map((val, ind) => <div className="flex items-center " key={ind}>
-            <div className="text-[21px] sm:text-[24px] md:text-[27px] xl:text-[30px] lg:text-[37px] border-2 border-blue-600 h-[50px] w-[50px] md:h-[60px] md:w-[60px] lg:h-[70px] lg:w-[70px] rounded-full flex justify-center items-center text-orange-600 mr-3">
+            <div className="text-[21px] sm:text-[24px] md:text-[27px] xl:text-[30px] lg:text-[37px] border-2 border-blue-600 h-[50px] w-[50px] md:h-[60px] md:w-[60px] lg:h-[70px] lg:w-[70px] rounded-full flex justify-center items-center text-orange-600 cursor-pointer hover:text-orange-800 mr-3">
               {val.icons}
             </div>
             <div className="flex flex-col">

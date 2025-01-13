@@ -75,7 +75,7 @@ function People() {
                     {data.map((val, index) => (
                         <div
                             key={index}
-                            className="bg-cover bg-center max-w-[90%] md:max-w-[330px] lg:max-w-[380]  xl:max-w-[420px] min-w-[220px] flex text-xl font-bold  sm:mx-4 relative shadow-sm shadow-slate-200 pb-5 mx-2 my-2 pt-5"
+                            className="bg-cover bg-center max-w-[90%] md:max-w-[330px] lg:max-w-[380]  xl:max-w-[420px] min-w-[220px] flex text-xl font-bold  sm:mx-4 relative shadow-sm shadow-slate-200 pb-5 mx-2 my-2 pt-5  hover:shadow-[0px_0px_2px_0px_grey] rounded-md "
                         >
 
                             <div className='w-full flex justify-center text-orange-600 text-[60px]'>

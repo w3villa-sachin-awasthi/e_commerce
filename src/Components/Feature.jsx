@@ -103,7 +103,7 @@ function Feature() {
         
         
         <div className="w-[100%] absolute  bottom-4 text-center">
-          <span className="bg-slate-300 text-[14px] sm:text-[1em] text-black bg-opacity-80 px-4 py-2 rounded">{val.content}</span>
+          <span className="bg-slate-300 text-[14px] sm:text-[1em] text-black bg-opacity-80 px-4 py-2 rounded hover:text-white hover:bg-slate-600">{val.content}</span>
         </div>
       </div>
     ))}

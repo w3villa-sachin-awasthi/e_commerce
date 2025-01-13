@@ -117,7 +117,7 @@ function Brand() {
                     {data.map((val, index) => (
                         <div
                             key={index}
-                            className="bg-cover  object-cover bg-center  max-w-[140px] sm:min-w-[140px] sm:max-w-[120px] min-w-[95%] max-w-[95%] flex    text-xl font-bold  relative  shadow-md rounded-xl shadow-slate-400"
+                            className="bg-cover  object-cover bg-center  max-w-[140px] sm:min-w-[140px] sm:max-w-[120px] min-w-[95%] max-w-[95%] flex    text-xl font-bold  relative  shadow-md rounded-xl hover:shadow-none cursor-pointer shadow-slate-400"
 
                         >
 

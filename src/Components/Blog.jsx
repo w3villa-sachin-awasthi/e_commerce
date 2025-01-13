@@ -80,7 +80,7 @@ function Blog() {
                     {data.map((val, index) => (
                         <div
                             key={index}
-                            className="bg-cover bg-center h-auto max-w-[100%] md:max-w-[330px] lg:max-w-[380px]  xl:max-w-[440px] min-w-[220px] flex flex-wrap text-xl font-bold  sm:mx-4 relative shadow-sm shadow-slate-200 pb-10   my-4 overflow-hidden "
+                            className="bg-cover bg-center h-auto max-w-[100%] md:max-w-[330px] lg:max-w-[380px]  xl:max-w-[440px] min-w-[220px] flex flex-wrap text-xl font-bold  sm:mx-4 relative shadow-sm shadow-slate-200 pb-10   my-4 overflow-hidden shadow-md hover:shadow-slate-600 "
                         >
                             <div className="relative w-full">
                                 <img src={val.img} alt="" className="overflow-hidden w-full rounded-t-xl" />

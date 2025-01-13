@@ -108,7 +108,7 @@ function FeaturedCatergory() {
               <div>Dresses</div>
               <div>Pants</div>
               <div>T-shirts</div>
-              <div className="text-blue-900 font-bold underline">
+              <div className="text-blue-900 font-bold underline hover:text-black hover:no-underline">
                 See all in Fashion
               </div>
             </div>
@@ -147,15 +147,15 @@ function FeaturedCatergory() {
                 {/* Buttons */}
                 <div className="flex justify-between mt-[8px] px-2">
                   <div className="flex font-normal text-[13px] sm:text-[15px]">
-                    <button className="bg-blue-800 px-2 rounded-sm text-white font-light text-[9px] sm:text-[13px] overflow-hidden whitespace-nowrap text-ellipsis">
+                    <button className="bg-blue-800 px-2 rounded-sm text-white font-light text-[9px] sm:text-[13px] overflow-hidden whitespace-nowrap text-ellipsis hover:text-black">
                       ADD TO CART
                     </button>
                   </div>
                   <div className="flex items-center text-slate-700">
-                    <div className="md:mr-6 mr-2">
+                    <div className="md:mr-6 mr-2 hover:text-black">
                       <FaRegHeart />
                     </div>
-                    <div className="md:mr-4 mr-2">
+                    <div className="md:mr-4 mr-2 hover:text-black">
                       <RiExchangeLine />
                     </div>
                   </div>

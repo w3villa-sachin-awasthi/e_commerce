@@ -27,7 +27,7 @@ function Gallery() {
                  {
 
                   arr.map((val,ind)=><div key={ind}
-                  className='w-[28%] shrink  sm:w-[110px] md:w-[160px] m-1  rounded-lg overflow-hidden'
+                  className='w-[28%] shrink  sm:w-[110px] md:w-[160px] m-1  rounded-lg overflow-hidden shadow-md hover:shadow-slate-900'
                   > 
                    <img src={val} alt="" />
                   </div>)
