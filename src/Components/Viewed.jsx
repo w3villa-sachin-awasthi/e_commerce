@@ -58,7 +58,7 @@ function Viewed() {
 
 
   return (
-    <div className='w-screen bg-slate-700  text-white py-5'>
+    <div className=''>
       <div className="flex flex-col  sm:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10 ">
 
 

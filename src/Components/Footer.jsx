@@ -3,8 +3,8 @@ import { FaRegEnvelope } from "react-icons/fa6";
 
 function Footer() {
     return (
-        <footer className="footer bg-slate-50 text-black px-5 max-w-[1600px] mx-auto ">
-            <nav className='text-blue-700 text-[13px]'>
+        <footer className="footer bg-slate-50 text-black px-5 max-w-[1600px] mx-auto px-3 md:px-5 lg:px-7 2xl:px-10  font-medium">
+            <nav className='text-blue-700 text-[13px] '>
                 <h6 className="text-[15px] text-black ">About us</h6>
                 <div className='h-[1.2px] bg-orange-600 hidden sm:block w-[50px] '></div>
                 <a className="link link-hover">About us</a>

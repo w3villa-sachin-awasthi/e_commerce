@@ -15,6 +15,7 @@ import Social from './Components/Social';
 import Footer from './Components/Footer';
 import Info from './Components/Info';
 import HeroSection2 from './Components/HeroSection2';
+import Payment from './Components/Payment';
 function App() {
   return (
     <div className='min-h-screen p-0 m-0 box-border  bg-slate-50 w-full text-slate-950  '>
@@ -35,6 +36,7 @@ function App() {
      <Viewed/>
      <Social/>
      <Footer/>
+     {/* <Payment/> */}
     </div>
   )
 }

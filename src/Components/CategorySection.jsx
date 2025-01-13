@@ -52,7 +52,7 @@ function CategorySection() {
   };
 
   return (
-    <div className="w-screen bg-slate-100 pt-[10px] sm:pt-0">
+    <div className="w-full bg-slate-100 pt-[10px] sm:pt-0">
       <div className="flex flex-col md:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10">
         <div className="text-[26px] sm:text-[37px] xl:text-[43px] font-semibold">
           Featured Products
