@@ -14,9 +14,9 @@ function Gallery() {
         img1,img2,img3,img4,img5,img6,img7,img8,img9
     ]
     return (
-        <div className='flex justify-center  bg-gray-700   text-white px-3 md:px-5 lg:px-7 2xl:px-10'>
+        <div className='flex justify-center  bg-gray-700   text-white px-3 md:px-5 lg:px-7 xl:px-10'>
             <div className='max-w-[1600px] flex flex-col items-start  sm:items-center py-10 '>
-                <div className="text-[30] sm:text-[37px] xl:text-[43px] font-semibold">Improved Gallery Module</div>
+                <div className="text-[25px] sm:text-[37px] xl:text-[43px] font-semibold">Improved Gallery Module</div>
                 <div className="h-[2px] w-[60px] sm:w-[120px] bg-orange-600 my-2"></div>
                 <div className="w-[90%] sm:w-[80%] text-start sm:text-center text-[12px] text-slate-500 mb-6">
                      The Gallery module supports images, video and can also acts as banners that can point to say other page or open other Popup modules.

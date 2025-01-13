@@ -22,7 +22,7 @@ function App() {
      <Header></Header>
      <Navbar2/>
      <HeroSection2/>
-     <HeroSection/>
+     {/* <HeroSection/> */}
      <Component4/>
      
      <Feature/> 

@@ -64,7 +64,7 @@ function Blog() {
 
     return (
         <div className="flex flex-col md:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10">
-                   <div className="text-[30] sm:text-[47px] xl:text-[43px] font-semibold">From our Blog</div>
+                   <div className="text-[25px] sm:text-[47px] xl:text-[43px] font-semibold">From our Blog</div>
             <div className="h-[2px] w-[60px] md:w-[120px] bg-orange-600 my-2"></div>
             <div className="w-[90%] leading-5 sm:leading-6 sm:w-[70%] md:text-center text-slate-500 mb-6">
             Journal comes with its own simple yet powerful blog. With the new advnced typography styles your post page design will be unmatched

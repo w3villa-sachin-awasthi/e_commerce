@@ -28,17 +28,17 @@ function Component4() {
     }
   ]
   return (
-    <div className="bg-slate-700 w-full">
-      <div className="max-w-[1600px] mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 text-white py-6 px-4  md:px-5 lg:px-7 2xl:px-10 ">
+    <div className="bg-slate-700 w-full md:mt-3 lg:mt-5">
+      <div className="max-w-[1600px] mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 text-white py-5 px-4  md:px-5 lg:px-7 2xl:px-10 ">
 
         {
-          arr.map((val, ind) => <div className="flex items-center" key={ind}>
-            <div className="text-[19px] sm:text-[23px] md:text-[27px] xl:text-[30px] lg:text-[37px] border-2 border-blue-600 h-[50px] w-[50px] md:h-[60px] md:w-[60px] lg:h-[70px] lg:w-[70px] rounded-full flex justify-center items-center text-orange-700 mr-3">
+          arr.map((val, ind) => <div className="flex items-center " key={ind}>
+            <div className="text-[21px] sm:text-[24px] md:text-[27px] xl:text-[30px] lg:text-[37px] border-2 border-blue-600 h-[50px] w-[50px] md:h-[60px] md:w-[60px] lg:h-[70px] lg:w-[70px] rounded-full flex justify-center items-center text-orange-600 mr-3">
               {val.icons}
             </div>
             <div className="flex flex-col">
-              <div className="text-[0.8em] md:text-[1em] lg:text-[1.3em]">{val.item1}</div>
-              <div className="text-[0.6em] md:text-[0.8em] text-slate-300">{val.item2}</div>
+              <div className="text-[0.8em] sm:text-[0.9em] md:text-[1em] lg:text-[1.3em]">{val.item1}</div>
+              <div className="text-[0.6em] sm:text-[0.7em] md:text-[0.8em] text-slate-300">{val.item2}</div>
             </div>
           </div>)
         }

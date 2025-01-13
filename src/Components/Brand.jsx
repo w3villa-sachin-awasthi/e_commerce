@@ -104,7 +104,7 @@ function Brand() {
         
           
           <div className='flex sm:items-center items-start flex-col'>
-          <div className="text-[30] sm:text-[32px] xl:text-[43px] font-semibold">Shop by Brand</div>
+          <div className="text-[25px] sm:text-[32px] xl:text-[43px] font-semibold">Shop by Brand</div>
           <div className="h-[1.5px] w-[60px] sm:w-[120px] bg-orange-600 my-2"></div>
           </div>
 

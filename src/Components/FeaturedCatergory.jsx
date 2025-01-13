@@ -76,7 +76,7 @@ function FeaturedCatergory() {
    
    <div className="w-full bg-slate-200 py-3">
      <div className="flex flex-col md:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10">
-      <div className="text-[30] sm:text-[47px] xl:text-[43px] font-semibold">
+      <div className="text-[25px] sm:text-[47px] xl:text-[43px] font-semibold">
         Featured Category
       </div>
       <div className="h-[2px] w-[120px] bg-orange-600 my-2"></div>
@@ -88,22 +88,22 @@ function FeaturedCatergory() {
 
       <div className="flex   flex-col md:flex-row w-full h-auto justify-center   mt-5  ">
         {/* First Child Div */}
-        <div className="w-[100%] md:w-[30%] xl:w-[20%] flex justify-center items-center md:items-start px-0 sm:px-10 md:px-0  f-full   ">
-          <div className="bg-cover bg-slate-200 bg-center w-full flex flex-col relative shadow-sm shadow-slate-400 maxw-full  ">
+        <div className="w-[100%] md:w-[30%] xl:w-[20%] flex justify-center items-center md:items-start px-0 sm:px-10 md:px-0  f-full  md:h-[500px]  ">
+          <div className="bg-cover md:bg-slate-300 bg-center w-full flex flex-col relative  maxw-full h-full ">
             <div className="pl-5 h-[40px] mt-3 hidden  md:block font-semibold text-slate-700 text-[0.8em]">
               Fashion
               <div className="h-[1.5px] bg-orange-500 w-[47px]"></div>            </div>
             {/* imgage */}
-            <div               className="overflow-hidden md:h-[250px] w-full object-cover mx-auto pmd:x-5  md:pt-auto "
+            <div               className="overflow-hidden  w-full object-cover mx-auto pmd:x-5  md:pt-auto md:mt-[20px] md:h-[310px] "
             >
                  <img
               src={image1}
               alt=""
-              className="w-full "
+              className="w-full object-cover h-full object-center"
             />
             </div>
              {/* content  */}
-            <div className="flex flex-col justify-between bg-slate-200 py-2 font-light text-[15px]  sm:px-5 w-full mb-6 md:mb-7">
+            <div className="flex flex-col justify-between md:bg-slate-300 py-2 font-light text-[18px] sm:text-[15px]  sm:px-5 w-full mb-6 md:mb-7">
               <div>Accessories</div>
               <div>Dresses</div>
               <div>Pants</div>

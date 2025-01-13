@@ -62,7 +62,7 @@ function People() {
     return (
         <div className="flex flex-col sm:items-center max-w-[1600px] mx-auto my-5 py-10 px-3 md:px-5 lg:px-7 2xl:px-10">
          
-            <div className="text-[17px] sm:text-[37px] xl:text-[43px] font-semibold " >What are people saying about us</div>
+            <div className="text-[25px] sm:text-[37px] xl:text-[43px] font-semibold " >What are people saying about us</div>
             <div className="h-[2px] w-[60px] sm:w-[120px] bg-orange-600 my-2"></div>
 
 
