@@ -58,8 +58,8 @@ function Viewed() {
 
 
   return (
-    <div className=''>
-      <div className="flex flex-col  sm:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10 ">
+    <div className='bg-slate-700 py-6 sm:py-7 md:py-10'>
+      <div className="flex flex-col  sm:items-center max-w-[1600px] mx-auto  px-3 md:px-5 lg:px-7 2xl:px-10  ">
 
 
         <div className="text-[23px] w-full sm:text-[21px] uppercase font-medium">Most Viewed</div>
@@ -94,11 +94,11 @@ function Viewed() {
                 </div>
                 
                 <div className="  h-full w-full sm:w-[70%]  sm:absolute  top-0 right-0 text-black px-2 sm:px-0 flex flex-col items-start  ">
-                               <div className='font-normal sm:font-medium text-slate-600 mt-3'>{val.content}</div>
+                               <div className='font-normal sm:font-medium text-slate-600 mt-3 overflow-hidden'>{val.content}</div>
                                <div className='text-[16px] text-red-500 font-light sm:font-normal'>
                                 $399.00
                                </div>
-                               <div className='flex w-[50%] sm:w-[55%] justify-between sm:text-[23px] text-slate-700    sm:mt-[4px] sm:ml-2'>
+                               <div className='flex w-[50%] sm:w-[55%] justify-between sm:text-[23px] text-slate-700    sm:mt-[4px] sm:ml-2 mb-2'>
                                 <TiShoppingCart/>
                                 <CiHeart/>
                                 <RiExchangeLine/>
