@@ -25,15 +25,6 @@ function Header() {
                   <FaCaretDown />
                 </span>
               </summary>
-              {/* <details>
-                           <summary className="bg-blue-700 text-slate-50 rounded-none">
-                               All <span><FaCaretDown/></span>
-                           </summary>
-                           <ul className="bg-base-100 rounded-t-none p-2">
-                               <li><a href="#">Link 1</a></li>
-                               <li><a href="#">Link 2</a></li>
-                           </ul>
-                       </details> */}
             </li>
             <li className="w-[70%]">
               <input
@@ -57,16 +48,21 @@ function Header() {
             { icon: <FaRegHeart />, label: "WishList" },
             { icon: <RiExchangeLine />, label: "Compare" },
           ].map((item, index) => (
-            <div className="flex flex-col mx-2 hover:text-slate-950 " key={index}>
+            <div
+              className="flex flex-col mx-2 hover:text-slate-950 "
+              key={index}
+            >
               <div className="flex w-[100%] justify-center text-[24px] hover:text-[26px]">
                 {item.icon}
               </div>
-              <div className="text-[13px] hover:text-[15px] text-center">{item.label}</div>
+              <div className="text-[13px] hover:text-[15px] text-center">
+                {item.label}
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="hidden lg:flex h-[100%] items-center text-slate-700">
+        <div className="hidden lg:flex h-[100%] items-center text-slate-700 justify-end border-2 border-slate">
           0 items(s) - $0.00
           <button className="bg-blue-700 h-[38px] w-[35px] flex justify-center items-center text-white text-[28px] ml-3 hover:bg-white hover:text-blue-700">
             <TiShoppingCart />
@@ -90,55 +86,56 @@ function Header() {
         </div>
 
         {isMenuOpen && (
-  <div className="absolute top-[60px] left-0 w-[100%] bg-base-200 z-20 flex flex-col items-center p-4 lg:hidden">
-    <ul className="w-[60%]">
-      <li className="mb-2 flex">
-        <input
-          type="text"
-          placeholder="Search here..."
-          className="rounded-none w-[90%] p-2 text-black"
-        />
-        <li className="w-[10%] flex justify-center items-center bg-slate-600 text-white ">
-          <FaSearch className="" />
-        </li>
-      </li>
+          <div className="absolute top-[60px] left-0 w-[100%] bg-base-200 z-20 flex flex-col items-center p-4 lg:hidden">
+            <ul className="w-[60%]">
+              <li className="mb-2 flex">
+                <input
+                  type="text"
+                  placeholder="Search here..."
+                  className="rounded-none w-[90%] p-2 text-black"
+                />
+                <li className="w-[10%] flex justify-center items-center bg-slate-600 text-white ">
+                  <FaSearch className="" />
+                </li>
+              </li>
 
-      {[
-        "Login",
-        "Register",
-        "WishList",
-        "Compare",
-        "Cart: 0 items(s) - $0.00",
-      ].map((item, index) => (
-        <li
-          key={index}
-          className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900"
+              {[
+                "Login",
+                "Register",
+                "WishList",
+                "Compare",
+                "Cart: 0 items(s) - $0.00",
+              ].map((item, index) => (
+                <li
+                  key={index}
+                  className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900"
+                >
+                  {item}
+                </li>
+              ))}
+              <button
+                className="text-white text-[25px] w-full text-center hover:text-[27px] hover:box-border"
+                onClick={() => setIsMenuOpen((prev) => !prev)}
+              >
+                <IoMdClose />
+              </button>
+            </ul>
+          </div>
+        )}
+
+        {/* Content Below the Menu */}
+        <div
+          className={`${
+            isMenuOpen
+              ? "opacity-0 pointer-events-none"
+              : "opacity-100 pointer-events-auto"
+          } transition-opacity duration-300`}
         >
-          {item}
-        </li>
-      ))}
-      <button
-        className="text-white text-[25px] w-full text-center hover:text-[27px] hover:box-border"
-        onClick={() => setIsMenuOpen((prev) => !prev)}
-      >
-        <IoMdClose />
-      </button>
-    </ul>
-  </div>
-)}
-
-{/* Content Below the Menu */}
-<div
-  className={`${
-    isMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'
-  } transition-opacity duration-300`}
->
-  {/* This is the content below the menu */}
-  <div className="content-below-menu">
-    {/* Your content goes here */}
-  </div>
-</div>
-
+          {/* This is the content below the menu */}
+          <div className="content-below-menu">
+            {/* Your content goes here */}
+          </div>
+        </div>
       </div>
     </div>
   );
