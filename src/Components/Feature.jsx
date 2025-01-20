@@ -4,23 +4,33 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
 import axios from "axios";
-import addTOCart from "../Config/addToCart";
+import { selectProduct } from "../Config/redux/slices.js/product";
 import { addProduct } from "../Config/redux/slices.js/addTocartReducer";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 function Feature() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState({});
   const dispatch=useDispatch();
-
+  const navigate=useNavigate();
   // modal setting
 
   const [modalOpen, setModalOpen] = useState(false);
+ 
+
   function handleModal(val) {
     console.log("modal is opened and values are --> ", val);
-    setSelectedProduct({ ...val });
+    dispatch(selectProduct(val))
+
+
+
+     navigate(`/home/product/${val.id}`);
+
+   
+    // setSelectedProduct({ ...val });
     // console.log(selectedProduct)
-    setModalOpen(true);
+    // setModalOpen(true);
   }
   function closeModal() {
 
@@ -88,7 +98,7 @@ function Feature() {
 
   return (
     <div className="flex flex-col  sm:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10 ">
-      {modalOpen && (
+      {/* {modalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
 
@@ -111,7 +121,7 @@ function Feature() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
 
 
