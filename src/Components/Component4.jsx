@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect ,useState} from "react";
+
 import { TbTruckDelivery } from "react-icons/tb";
 import { GiReturnArrow } from "react-icons/gi";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { SiCodeblocks } from "react-icons/si";
-
+import axios from "axios";
 function Component4() {
+ 
   let arr = [
     {
       icons: <TbTruckDelivery />,

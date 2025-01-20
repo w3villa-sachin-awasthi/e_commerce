@@ -9,8 +9,10 @@ import { RiContactsBookFill } from "react-icons/ri";
 import { PiFireTruckBold } from "react-icons/pi";
 import { FaCircleUser } from "react-icons/fa6";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Info() {
+  const navigate=useNavigate();
   return (
       <div className="max-w-[1600px] mx-auto flex justify-between items-center h-[35px] bg-blue-600 md:bg-slate-50 text-slate-500 text-[11px] font-medium   px-3 md:px-5 lg:px-7 2xl:px-10 ">
         <div className="flex justify-between w-full md:hidden  text-white">
@@ -45,9 +47,9 @@ function Info() {
           </div>
         </div>
         <div className="hidden md:flex  ">
-          <div className="flex items-center mx-1 hover:text-black cursor-pointer">
+          <div className="flex items-center mx-1 hover:text-black cursor-pointer" onClick={()=>navigate("/home/")}>
             {" "}
-            <div className="text-[1.2em] mr-1 font-semibold ">
+            <div className="text-[1.2em] mr-1 font-semibold " >
               <CiHome />{" "}
             </div>{" "}
             Home{" "}

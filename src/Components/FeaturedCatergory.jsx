@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect ,useState} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,9 +14,11 @@ import { RiExchangeLine } from "react-icons/ri";
 import { CiDollar } from "react-icons/ci";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
+import axios from "axios";
 
 function FeaturedCatergory() {
-  let data = [
+
+   let data = [
     { img: image2, content: "Bodycorn Dress", price: "$1099.00", model: "222" },
     {
       img: image3,

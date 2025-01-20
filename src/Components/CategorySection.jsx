@@ -15,7 +15,7 @@ import { CiDollar } from "react-icons/ci";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 import { TiShoppingCart } from "react-icons/ti";
-
+import { Link } from "react-router-dom";
 function CategorySection() {
   const settings = {
     dots: true,
@@ -96,7 +96,7 @@ function CategorySection() {
                   Top Brand
                 </div>
               </div>
-              <div lassName="overflow-hidden h-[100%] sm:h-[250px] ">
+              <div className="overflow-hidden h-[100%] sm:h-[250px] ">
                 <img
                   src={image2}
                   alt=""
@@ -177,7 +177,7 @@ function CategorySection() {
                   Top Brand
                 </div>
               </div>
-              <div lassName="overflow-hidden h-[100%] sm:h-[250px] ">
+              <div className="overflow-hidden h-[100%] sm:h-[250px] ">
                 <img
                   src={image1}
                   alt=""
@@ -259,7 +259,7 @@ function CategorySection() {
                   Top Brand
                 </div>
               </div>
-              <div lassName="overflow-hidden h-[100%] sm:h-[250px] ">
+              <div className="overflow-hidden h-[100%] sm:h-[250px] ">
                 <img
                   src={image3}
                   alt=""
@@ -342,7 +342,7 @@ function CategorySection() {
                   Top Brand
                 </div>
               </div>
-              <div lassName="overflow-hidden h-[100%] sm:h-[250px] ">
+              <div className="overflow-hidden h-[100%] sm:h-[250px] ">
                 <img
                   src={image4}
                   alt=""
@@ -423,7 +423,7 @@ function CategorySection() {
                   Top Brand
                 </div>
               </div>
-              <div lassName="overflow-hidden h-[100%] sm:h-[250px] ">
+              <div className="overflow-hidden h-[100%] sm:h-[250px] ">
                 <img
                   src={image5}
                   alt=""
@@ -494,12 +494,12 @@ function CategorySection() {
           </Slider>
         </div>
         <div className="w-full flex justify-center my-10">
-          <button className="uppercase bg-blue-800  text-white text-[0.8em] px-3 py-2 flex items-center rounded-sm hover:text-black">
+          <Link  to={'/home'} className="uppercase bg-blue-800  text-white text-[0.8em] px-3 py-2 flex items-center rounded-sm hover:text-black">
             see all products{" "}
             <span className="ml-2">
               <BsArrowRight />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
