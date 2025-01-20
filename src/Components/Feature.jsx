@@ -12,12 +12,12 @@ function Feature() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState({});
-  const dispatch=useDispatch();
-  const navigate=useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   // modal setting
 
   const [modalOpen, setModalOpen] = useState(false);
- 
+
 
   function handleModal(val) {
     console.log("modal is opened and values are --> ", val);
@@ -25,23 +25,17 @@ function Feature() {
 
 
 
-     navigate(`/home/product/${val.id}`);
-
-   
-    // setSelectedProduct({ ...val });
-    // console.log(selectedProduct)
-    // setModalOpen(true);
-  }
-  function closeModal() {
+    navigate(`/home/product/${val.id}`);
 
   }
+
 
   async function handleClick() {
     try {
       // setLoading(true)
       setLoading(true);
       console.log("loading")
-      const response = await axios.get('https://fakestoreapi.com/products?limit=5');
+      const response = await axios.get('https://fakestoreapi.com/products?limit=10');
       // console.log(response.data[0].price)
       setData(response.data);
       setLoading(false);
@@ -51,8 +45,20 @@ function Feature() {
       alert("error occurs uring fetching products")
     }
   }
-  function handleAddtoCart(){
-
+  async function handleSelectedClick(val) {
+    try {
+      // setLoading(true)
+      setLoading(true);
+      console.log("loading")
+      const response = await axios.get(`https://fakestoreapi.com/products/category/${val}?limit=10`);
+      // console.log(response.data[0].price)
+      setData(response.data);
+      setLoading(false);
+      //  setLoading(false)
+    } catch (error) {
+      setLoading(false);
+      alert("error occurs uring fetching products")
+    }
   }
   useEffect(() => {
     handleClick();
@@ -98,30 +104,6 @@ function Feature() {
 
   return (
     <div className="flex flex-col  sm:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10 ">
-      {/* {modalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
-
-            <div className="w-[100%]  h-[240px] rounded-lg shadow-md shadow-slate-400 ">
-              <img src={selectedProduct.image} alt="" className="w-full h-full object-contain object-center" />
-            </div>
-            <h3 className="font-bold text-lg mt-2">{selectedProduct.category}!</h3>
-            <p className="text-[8px] mt-2">{selectedProduct.description
-            }</p>
-            <p className="text-yellow-600">$ {selectedProduct.price}</p>
-            <p className="flex w-[50%] justify-between text-[12px] mt-2">
-              <div className="flex items-center">Rating: {selectedProduct.rating.rate} <div className="text-yellow-400"><FaStar /></div></div>
-              <div className="">Review's:{selectedProduct.rating.count}</div>
-            </p>
-            <div className="flex w-full justify-between text-[12px] mt-2">
-              <button 
-              onClick={()=>dispatch(addProduct(selectedProduct))}
-               className="border-2 border-blue-600 rounded-md px-2 bg-blue-600">Add to Cart</button>
-              <button className="border-2 border-blue-600 rounded-md px-2 text-white bg-blue-600 " onClick={() => setModalOpen(false)}>Close</button>
-            </div>
-          </div>
-        </div>
-      )} */}
 
 
 
@@ -134,17 +116,24 @@ function Feature() {
 
 
       <div className="flex h-[33px] sm:h-[40px] bg-slate-200 my-5  ">
-        <div className="h-full min-w-[180px] w-1/2 sm:w-auto bg-blue-700  text-white px-4 flex justify-center items-center cursor-pointer hover:text-blue-700 hover:font-bold hover:bg-white  font-semibold text-[11px] md:text-[15px]">
-          TOP CATEGORIES
+        <div
+          onClick={() => handleSelectedClick(`electronics`)}
+          className="h-full min-w-[180px] w-1/2 sm:w-auto bg-blue-700  text-white px-4 flex justify-center items-center cursor-pointer hover:text-blue-700 hover:font-bold hover:bg-white  font-semibold text-[11px] md:text-[15px]">
+          electronics
         </div>
-        <div className="h-full w-1/2 flex justify-center items-center px-3 border-[0.5px] hover:font-bold border-slate-300 cursor-pointer text-[11px] md:text-[15px]">
-          ELECTRONICS
+        <div
+          onClick={() => handleSelectedClick(`jewelery`)}
+          className="h-full w-1/2 flex justify-center items-center px-3 border-[0.5px] hover:font-bold border-slate-300 cursor-pointer text-[11px] md:text-[15px]">
+          jewelery
         </div>
-        <div className="h-full hidden sm:flex justify-center items-center px-3 border-[0.5px] hover:font-bold border-slate-300 cursor-pointer text-[11px] md:text-[15px]">
-          BEAUTY
+        <div
+          onClick={() => handleSelectedClick(`men's clothing`)} className="h-full md:w-[200px] hidden sm:flex justify-center items-center px-3 border-[0.5px] hover:font-bold border-slate-300 cursor-pointer text-[11px] md:text-[15px]">
+          men's clothing
         </div>
-        <div className="h-full hidden sm:flex justify-center items-center px-3 border-[0.5px] hover:font-bold border-slate-300 cursor-pointer text-[11px] md:text-[15px] ">
-          FASHION
+        <div
+          onClick={() => handleSelectedClick(`women's clothing`)}
+          className="h-full hidden md:w-[230px] sm:flex justify-center items-center px-3 border-[0.5px] hover:font-bold border-slate-300 cursor-pointer text-[11px] md:text-[15px] ">
+          women's clothing
         </div>
       </div>
 
@@ -164,7 +153,7 @@ function Feature() {
                 <img
                   src={val.image}
                   alt=""
-                  className='w-[100%] object-cover object-center h-[100%]'
+                  className='w-[100%] object-contain object-center h-[100%]'
                 />
 
               </div>
