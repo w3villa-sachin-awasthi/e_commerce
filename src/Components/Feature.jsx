@@ -167,6 +167,13 @@ function Feature() {
         </Slider>
       </div>
 
+      <div className="join mt-8 mx-auto">
+        <button  onClick={() => handleSelectedClick(`electronics`)} className="join-item btn">1</button>
+        <button    onClick={() => handleSelectedClick(`jewelery`)} className="join-item btn btn-active">2</button>
+        <button  onClick={() => handleSelectedClick(`men's clothing`)} className="join-item btn">3</button>
+        <button  onClick={() => handleSelectedClick(`women's clothing`)} className="join-item btn">4</button>
+      </div>
+
     </div>
   );
 }

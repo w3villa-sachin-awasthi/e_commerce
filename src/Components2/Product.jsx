@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addProduct } from '../Config/redux/slices.js/addTocartReducer';
+import { useParams } from 'react-router-dom';
 function Product() {
+    const pm=useParams();
+    console.log("params ",pm.id);
     const product = useSelector(state => state.product.value);
    
     const dispatch = useDispatch();
