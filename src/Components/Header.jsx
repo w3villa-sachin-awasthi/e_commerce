@@ -57,7 +57,8 @@ function Header() {
           </ul>
         </div>
 
-        <div onClick={()=>navigate('/')} className="md:flex w-auto lg:w-[20%] hidden text-slate-700">
+        <div onClick={() => navigate('/')} className="md:flex w-auto lg:w-[20%] hidden text-slate-700">
+
           <div className="flex flex-col mx-2 hover:text-slate-950">
             <div className="flex w-[100%] justify-center text-[24px] hover:text-[26px]">
               <FaUserCircle />
@@ -65,11 +66,11 @@ function Header() {
             <div className="text-[13px] hover:text-[15px] text-center">Login</div>
           </div>
 
-          <Link to={'/register'}  className="flex flex-col mx-2 hover:text-slate-950">
+          <Link to={'/register'} className="flex flex-col mx-2 hover:text-slate-950">
             <div className="flex w-[100%] justify-center text-[24px] hover:text-[26px]">
               <FaPen />
             </div>
-            <div  className="text-[13px] hover:text-[15px] text-center">Register</div>
+            <div className="text-[13px] hover:text-[15px] text-center">Register</div>
           </Link>
 
           <div className="flex flex-col mx-2 hover:text-slate-950">
@@ -131,21 +132,20 @@ function Header() {
                   <FaSearch className="" />
                 </li>
               </li>
+              <li onClick={()=>{
+                 setIsMenuOpen(false);
+                navigate("/home")
+              }} className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900">
+                Home
+              </li>
+              <li className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900">
+                Login
+              </li>
+              <li className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900">
+                Register
+              </li>
+             
 
-              {[
-                "Login",
-                "Register",
-                "WishList",
-                "Compare",
-                "Cart: 0 items(s) - $0.00",
-              ].map((item, index) => (
-                <li
-                  key={index}
-                  className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900"
-                >
-                  {item}
-                </li>
-              ))}
               <button
                 className="text-white text-[25px] w-full text-center hover:text-[27px] hover:box-border"
                 onClick={() => setIsMenuOpen((prev) => !prev)}

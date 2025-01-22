@@ -18,7 +18,7 @@ function Body() {
   return (
     <div>
         
-    <Navbar2/>
+     <Navbar2/>
      <HeroSection2/>
      <Component4/>
      <Feature/> 
