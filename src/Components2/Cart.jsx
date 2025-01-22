@@ -15,7 +15,7 @@ function Cart() {
         <div className="min-h-screen bg-gray-100 p-4">
             <h1 className="text-3xl font-bold text-center mb-6">Your Cart</h1>
             <div className='w-full px-6  md:w-[400px] h-[60px] bg-slate-300 mx-auto flex justify-between items-center rounded-md mb-4'>
-                <div>   {total} </div> 
+                <div> Total: ${total} </div> 
                 <button className='btn'>Place Order</button>
             </div>
             {products.length === 0 ? (

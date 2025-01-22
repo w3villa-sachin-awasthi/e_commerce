@@ -16,7 +16,7 @@ function Header() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const carts = useSelector((state) => state.cart.value.length)
-  console.log("cart value is ", carts)
+
   function handleClick() {
     navigate("/home/search");
     console.log(search)

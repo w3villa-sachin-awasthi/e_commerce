@@ -16,40 +16,9 @@ import { FaRegQuestionCircle } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import { categorySectionSetting as settings } from "../Config/data";
 function CategorySection() {
-  const settings = {
-    dots: true,
-    arrows: false,
-    infinite: false, // Disable infinite scrolling for better control
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1, // Scroll one slide at a time for better user experience
-    responsive: [
-      {
-        breakpoint: 1220, // For tablets
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 950, // For tablets
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 620, // For small devices
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+
 
   return (
     <div className="w-full bg-slate-100 pt-[10px] sm:pt-0">

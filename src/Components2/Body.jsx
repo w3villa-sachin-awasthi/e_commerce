@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar2 from '../Components/Navbar2'
-import HeroSection from '../Components/HeroSection'
+
 import Component4 from '../Components/Component4'
 import Feature from '../Components/Feature'
 import CategorySection from '../Components/CategorySection'

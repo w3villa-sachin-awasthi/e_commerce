@@ -8,25 +8,9 @@ import image3 from '../assets/Blog/img3.jpeg'
 import { FaEye } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
 import { AiFillMessage } from "react-icons/ai";
+import { blogData as data } from '../Config/data';
 function Blog() {
-    let data = [
-        {
-            img: image1,
-            content: "Journal Blog is Here",
-            description: "Discover daily insights and thought-provoking articles crafted to inspire, inform, and entertain. Dive into a world of creativity and knowledge, where every blog post offers unique perspectives and valuable takeaways. Perfect for those who love exploring ideas and expanding their understanding of the world"
-        },
-        {
-            img: image2,
-            content: "Best Leather Bags",
-            description: "Explore our premium collection of stylish and durable leather bags. Perfect for work, travel, or casual outings, these bags combine functionality and fashion effortlessly. Experience unmatched craftsmanship and timeless designs that elevate your everyday style while providing ample storage for your essentials."
-        },
-        {
-            img: image3,
-            content: "Another Blog Post",
-            description: "Engage with captivating stories and insightful articles designed to spark curiosity and provide inspiration. From lifestyle tips to personal growth strategies, this blog offers a diverse range of topics for readers seeking meaningful and enriching content. Perfect for anyone who enjoys thoughtful, well-crafted writing."
-        },
-    ];
-
+  
 
     const settings = {
         dots: true,

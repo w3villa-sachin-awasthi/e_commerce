@@ -8,21 +8,21 @@ function Product() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const allProducts = useSelector(state => state.allProduct.value);
-    console.log("all products ", allProducts, "  ", id);
+  
     useEffect(() => {
         const fetchProduct = async () => {
             if (id && allProducts.length > 0) {
                 const selectedProduct = allProducts.find(product => product.id === parseInt(id));
-                console.log("first");
+              
                 if (selectedProduct) {
                     setProduct(selectedProduct);
                 }
             } else if (id) {
                 try {
-                    console.log("second");
+                  
                     const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
                     setProduct(response.data); // Un-comment this line to update the state
-                    console.log("product fetch with API:", response.data);
+                   
                 } catch (error) {
                     alert("Error fetching the product");
                 }

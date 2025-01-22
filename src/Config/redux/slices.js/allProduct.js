@@ -11,12 +11,11 @@ export const addproductSlice = createSlice({
   reducers: {
 
     addAllProduct: (state, action) => {
-      console.log("Product selected:", action.payload);  // Log the selected product
-      // state.value.push action.payload;  // Store the selected product in state
+     
       if(action.payload){
        
         state.value=[...action.payload];
-        console.log("add product (all)",state.value)
+        
       }
     },
 

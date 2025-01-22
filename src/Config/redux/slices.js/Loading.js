@@ -11,8 +11,7 @@ export const loadingSlice = createSlice({
   reducers: {
 
     addLoading: (state, action) => {
-      console.log("loading selected:", action.payload);  // Log the selected product
-      // state.value.push action.payload;  // Store the selected product in state
+
       state.value=action.payload;
     },
 

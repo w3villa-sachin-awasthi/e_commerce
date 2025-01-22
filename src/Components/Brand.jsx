@@ -21,7 +21,7 @@ import { RiExchangeLine } from "react-icons/ri";
 import { CiDollar } from "react-icons/ci";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
-
+import { Brandsettings as settings } from '../Config/data';
 function Brand() {
     let data = [
         { img: image1,  },
@@ -38,63 +38,6 @@ function Brand() {
         { img: image12,},
        
     ];
-
-    const settings = {
-        dots: true,
-        arrows: false, 
-        infinite: false, // Disable infinite scrolling for better control
-        speed: 500,
-        slidesToShow: 8,
-        slidesToScroll: 1, // Scroll one slide at a time for better user experience
-        responsive: [
-            {
-                breakpoint: 1500, // For tablets
-                settings: {
-                    slidesToShow: 8,
-                    slidesToScroll: 1,
-                    dots: true,
-                },
-            },
-            {
-                breakpoint: 1250, // For tablets
-                settings: {
-                    slidesToShow: 7,
-                    slidesToScroll: 1,
-                    dots: true,
-                },
-            },
-            {
-                breakpoint: 1100, // For tablets
-                settings: {
-                    slidesToShow: 6,
-                    slidesToScroll: 1,
-                    dots: true,
-                },
-            },
-           
-            {
-                breakpoint: 900, // For small devices
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 770, // For small devices
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 630, // For small devices
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                },
-            }
-        ],
-    };
 
     return (
         <div className=" max-w-[1600px] mx-auto my-14 px-3 md:px-5 lg:px-7 2xl:px-10">

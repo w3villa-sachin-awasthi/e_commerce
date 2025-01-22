@@ -15,7 +15,7 @@ import { CiDollar } from "react-icons/ci";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 import axios from "axios";
-
+import { featuredCategorySection as settings } from "../Config/data";
 function FeaturedCatergory() {
 
    let data = [
@@ -40,39 +40,7 @@ function FeaturedCatergory() {
     },
   ];
 
-  const settings = {
-    dots: true,
-    arrows: false,
-    infinite: true, // Disable infinite scrolling for better control
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1, // Scroll one slide at a time for better user experience
-    responsive: [
-      {
-        breakpoint: 1480, // For tablets
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1130, // For tablets
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 530, // For small devices
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+ 
 
   return (
    

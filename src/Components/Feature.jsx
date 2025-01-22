@@ -9,19 +9,17 @@ import { addProduct } from "../Config/redux/slices.js/addTocartReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addAllProduct } from "../Config/redux/slices.js/allProduct";
-import Loader from '../Components2/Loader'
+import Loader from "../Components2/Loader";
 import { addLoading } from "../Config/redux/slices.js/Loading";
+import { setting1 as settings } from "../Config/data";
 function Feature() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
-
 
   function handleModal(val) {
-  
     dispatch(selectProduct(val));
 
     navigate(`/home/product/${val.id}`);
@@ -29,65 +27,27 @@ function Feature() {
 
   async function handleSelectedClick(val) {
     try {
-   
-     
-       dispatch(addLoading(true))
+      dispatch(addLoading(true));
       const response = await axios.get(
         `https://fakestoreapi.com/products/category/${val}?limit=10`
       );
       dispatch(addAllProduct(response.data));
       setData(response.data);
-   
-      dispatch(addLoading(false))
-    
+
+      dispatch(addLoading(false));
     } catch (error) {
       setLoading(false);
       alert("error occurs uring fetching products");
     }
   }
   const product = useSelector((state) => state.allProduct.value);
-  const loader=useSelector((state)=>state.loading.value)
+  const loader = useSelector((state) => state.loading.value);
   useEffect(() => {
     setData(product);
   }, [product]);
-  useEffect(()=>{
-    setLoading(loader)
-  },[loader])
-  const settings = {
-    dots: true,
-    arrows: false,
-    infinite: true, // Enable infinite scrolling for continuous looping
-    speed: 500,
-    slidesToShow: 4,
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 2000, // Adjust the speed (in milliseconds) for auto sliding
-    slidesToScroll: 1, // Scroll one slide at a time for better user experience
-    responsive: [
-      {
-        breakpoint: 1190, // For tablets
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 950, // For smaller tablets
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 620, // For small devices
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  useEffect(() => {
+    setLoading(loader);
+  }, [loader]);
 
   return (
     <div className="flex flex-col  sm:items-center max-w-[1600px] mx-auto my-10 px-3 md:px-5 lg:px-7 2xl:px-10 ">
@@ -131,7 +91,7 @@ function Feature() {
         </div>
       </div>
 
-      {loading && <Loader/>}
+      {loading && <Loader />}
       <div className="w-[100%] text-center ">
         <Slider {...settings}>
           {data.length > 0 &&
@@ -154,7 +114,7 @@ function Feature() {
 
                 <div className="w-[100%] absolute  bottom-4 text-center">
                   <span className="bg-slate-300 text-[14px] sm:text-[1em] text-black bg-opacity-80 px-4 py-2 rounded hover:text-white hover:bg-slate-600">
-                    {val.price}
+                    ${val.price}
                   </span>
                 </div>
               </div>

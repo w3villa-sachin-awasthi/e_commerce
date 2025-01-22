@@ -3,25 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ImQuotesLeft } from "react-icons/im";
+import { personData as data } from '../Config/data';
 function People() {
-    const data = [
-        {
-            name: "John Doe",
-            saying: "Our company thrives on innovation, collaboration, and dedication. We believe in empowering our team to create impactful solutions that drive success and foster growth. We’re proud to have a passionate team committed to excellence."
-        },
-        {
-            name: "Jane Smith",
-            saying: "At our company, we embrace challenges and transform them into opportunities. Every member of our team plays a pivotal role in achieving our goals. Together, we deliver quality results and build lasting relationships with our clients."
-        },
-        {
-            name: "Mike Johnson",
-            saying: "Our company is built on trust and integrity. We value creativity and hard work, constantly pushing boundaries to deliver exceptional results. Our people are the heart of our success, and we are committed to supporting their growth and development."
-        },
-        {
-            name: "Emily White",
-            saying: "In our company, innovation and teamwork go hand in hand. We’re driven by a shared vision to create the best solutions for our clients. The passion and dedication of our team make us stand out in the industry."
-        }
-    ];
+   
 
 
 

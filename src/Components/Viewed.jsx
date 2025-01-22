@@ -10,7 +10,7 @@ import image5 from '../assets/cimages/cimg5.webp';
 import { TiShoppingCart } from "react-icons/ti";
 import { CiHeart } from "react-icons/ci";
 import { RiExchangeLine } from "react-icons/ri";
-
+import { viewedSettings as settings } from '../Config/data';
 function Viewed() {
   let data = [
     { img: image1, content: "fashion" },
@@ -20,41 +20,7 @@ function Viewed() {
     { img: image5, content: "home decor" },
   ];
 
-  const settings = {
-    dots: true,
-    arrows: false,
-    infinite: true, // Enable infinite scrolling for continuous looping
-    speed: 500,
-    slidesToShow: 4,
-    autoplay: false, // Enable autoplay
-    autoplaySpeed: 2000, // Adjust the speed (in milliseconds) for auto sliding
-    slidesToScroll: 1, // Scroll one slide at a time for better user experience
-    responsive: [
-      {
-        breakpoint: 1190, // For tablets
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 950, // For smaller tablets
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 620, // For small devices
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+
 
 
   return (
