@@ -1,0 +1,20 @@
+[1mdiff --git a/src/component3/Temp.jsx b/src/component3/Temp.jsx[m
+[1mindex f157f5d..0cf290f 100644[m
+[1m--- a/src/component3/Temp.jsx[m
+[1m+++ b/src/component3/Temp.jsx[m
+[36m@@ -2,7 +2,15 @@[m [mimport React from 'react'[m
+ [m
+ function Temp() {[m
+   return ([m
+[32m+[m[32m<<<<<<< HEAD[m
+[32m+[m[32m    <div>Temp3[m
+[32m+[m[32m        <h2>this is temporay commit[m
+[32m+[m[41m            [m
+[32m+[m[32m        </h2>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m=======[m
+     <div>Temp3</div>[m
+[32m+[m[32m>>>>>>> main[m
+   )[m
+ }[m
+ [m
