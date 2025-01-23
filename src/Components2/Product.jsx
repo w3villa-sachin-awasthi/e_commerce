@@ -3,14 +3,28 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addProduct } from '../Config/redux/slices.js/addTocartReducer';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Loader from './Loader';
+import { productCategory } from '../Config/data';
 function Product() {
     const [product, setProduct] = useState(null);
     const { id } = useParams();
     const dispatch = useDispatch();
     const allProducts = useSelector(state => state.allProduct.value);
-  
+    console.log(id," product ",allProducts)
     useEffect(() => {
         const fetchProduct = async () => {
+            if(id>=30&&id<=34){
+             for(let i=0;i<productCategory.length;i++){
+                if(productCategory[i].id==id){
+                     console.log("mil gaya")
+                     setProduct(productCategory[i]);
+                     return ;
+                }
+                 console.log("try again ")
+                return ;
+             }
+               setProduct(productCategory[id]);
+            }
             if (id && allProducts.length > 0) {
                 const selectedProduct = allProducts.find(product => product.id === parseInt(id));
               
@@ -32,7 +46,7 @@ function Product() {
         fetchProduct();
     }, [id, allProducts]); 
     if (!product) {
-        return <div className="text-center py-10 text-xl">Product not found</div>;
+        return <Loader/>
     }
 
     return (

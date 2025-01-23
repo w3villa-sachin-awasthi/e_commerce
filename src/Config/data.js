@@ -249,3 +249,87 @@ export  const viewedSettings = {
       },
     ],
   };
+
+// categoty section data
+import image111 from "../assets/productImages/headphone.jpeg";
+import image222 from "../assets/productImages/heels.jpeg";
+import image333 from "../assets/productImages/tv.jpeg";
+import image444 from "../assets/productImages/camera.jpeg";
+import image555 from "../assets/productImages/phone.jpeg";
+export const productCategory=[
+    {
+      id: 30,
+      title: "Men's Casual Sandals",
+      price: 999.00,
+      description: "Comfortable and stylish sandals for everyday wear. Designed with durable materials for long-lasting use.",
+      category: "footwear",
+      image: image222,
+      rating: {
+        rate: 4.2,
+        count: 185
+      },
+      brand: "Erickson",
+      model: "519",
+      oldPrice: 3299.00
+    },
+    {
+      id: 31,
+      title: "Wireless Headphones",
+      price: 999.00,
+      description: "High-quality wireless headphones with noise cancellation and deep bass for an immersive audio experience.",
+      category: "electronics",
+      image: image111,
+      rating: {
+        rate: 4.5,
+        count: 342
+      },
+      brand: "Erickson",
+      model: "519",
+      oldPrice: 3299.00
+    },
+    {
+      id: 32,
+      title: "Samsung QLED TV",
+      price: 1299.00,
+      description: "Experience stunning visuals with a 4K QLED display, vibrant colors, and ultra-slim design.",
+      category: "electronics",
+      image: image333,
+      rating: {
+        rate: 4.7,
+        count: 256
+      },
+      brand: "Samsung",
+      model: "QLED",
+      oldPrice: 2499.00
+    },
+    {
+      id: 33,
+      title: "Canon EOS Camera",
+      price: 2199.00,
+      description: "Professional-grade DSLR camera with high-resolution imaging, 4K video recording, and advanced autofocus.",
+      category: "electronics",
+      image: image444,
+      rating: {
+        rate: 4.8,
+        count: 412
+      },
+      brand: "Canon",
+      model: "EOS",
+      oldPrice: 3999.00
+    },
+    {
+      id: 34,
+      title: "Apple iPhone 14",
+      price: 799.00,
+      description: "Latest iPhone with A15 Bionic chip, advanced dual-camera system, and all-day battery life.",
+      category: "mobile phones",
+      image: image555,
+      rating: {
+        rate: 4.6,
+        count: 598
+      },
+      brand: "Apple",
+      model: "iPhone 14",
+      oldPrice: 999.00
+    }
+  ];

@@ -2,11 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import image1 from "../assets/productImages/headphone.jpeg";
-import image2 from "../assets/productImages/heels.jpeg";
-import image3 from "../assets/productImages/tv.jpeg";
-import image4 from "../assets/productImages/camera.jpeg";
-import image5 from "../assets/productImages/phone.jpeg";
+
 import { FaAngleUp } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
@@ -15,10 +11,19 @@ import { CiDollar } from "react-icons/ci";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 import { TiShoppingCart } from "react-icons/ti";
-import { Link } from "react-router-dom";
-import { categorySectionSetting as settings } from "../Config/data";
+import { Link, useNavigate } from "react-router-dom";
+import { productCategory, categorySectionSetting as settings } from "../Config/data";
+import { selectProduct } from "../Config/redux/slices.js/product";
+import { useDispatch } from "react-redux";
+import { productCategory as products } from "../Config/data";
 function CategorySection() {
-
+  const navigate=useNavigate();
+  const dispatch=useDispatch();
+   function handleModal(val) {
+      dispatch(selectProduct(val));
+  
+      navigate(`/home/product/${val.id}`);
+    }
 
   return (
     <div className="w-full bg-slate-100 pt-[10px] sm:pt-0">
@@ -53,7 +58,12 @@ function CategorySection() {
         <div className="w-[100%]   text-center  ">
           <Slider {...settings}>
             {/* first */}
-            <div className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 border-[1px] border-slate-300 shadow-[0px_0px_0px_0px_grey] ">
+            {
+              products.map((val)=>
+                <div key={val.id}
+                onClick={(e) => handleModal(val)}
+                 className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 border-[1px] border-slate-300 shadow-[0px_0px_0px_0px_grey] ">
+                 
               <div
                 className="absolute top-[34px] left-[-50px] text-[14px] bg-red-600 text-white text-center uppercase w-[200px] "
                 style={{ transform: "rotate(-45deg)" }}
@@ -67,7 +77,7 @@ function CategorySection() {
               </div>
               <div className="overflow-hidden h-[100%] sm:h-[250px] ">
                 <img
-                  src={image2}
+                  src={productCategory[0].image}
                   alt=""
                   className="overflow-hidden h-[100%] w-[100%] h-full object-cover"
                 />
@@ -132,334 +142,10 @@ function CategorySection() {
                   Question
                 </div>
               </div>
-            </div>
-            {/* second  */}
-            <div className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 border-[1px] border-slate-300 shadow-[0px_0px_0px_0px_grey] ">
-              <div
-                className="absolute top-[34px] left-[-50px] text-[14px] bg-red-600 text-white text-center uppercase w-[200px] "
-                style={{ transform: "rotate(-45deg)" }}
-              >
-                2-3 days
-              </div>
-              <div className="absolute right-2  text-[9px] leading-3 top-2 ">
-                <div className="w-[60px] bg-orange-600 text-white px-2 py-1 flex justify-center mt-1 rounded-sm">
-                  Top Brand
-                </div>
-              </div>
-              <div className="overflow-hidden h-[100%] sm:h-[250px] ">
-                <img
-                  src={image1}
-                  alt=""
-                  className="overflow-hidden h-[100%] w-[100%] h-full object-cover"
-                />
-              </div>{" "}
-              <div className="flex justify-between bg-slate-200 text-slate-500 py-2 font-light text-[15px] px-1">
-                <div>Erickson</div>
-                <div>Model 519</div>
-              </div>
-              <div className="w-full text-[30px] flex justify-start font-normal mt-2 px-2">
-                Headphone
-              </div>
-              <div className="font-light w-full text-start text-[16px] text-slate-500 px-2 mt-[10px]">
-                $999.00 <span className="text-[12px]  ">$3,299.00</span>{" "}
-              </div>
-              <div className="flex justify-between mt-[8px] px-3">
-                <div className="flex font-normal text-[17px]">
-                  <div className="text-[19px] w-[35px] py-1 border-[1px] border-slate-400 text-slate-700">
-                    1
-                  </div>
-                  <div className="bg-slate-300 font-light px-[px] ">
-                    <div className="hover:bg-slate-200">
-                      <FaAngleUp />
-                    </div>
-                    <div className="hover:bg-slate-200">
-                      {" "}
-                      <FaAngleDown />{" "}
-                    </div>
-                  </div>
-                  <button className="bg-blue-800 px-2 rounded-sm text-white font-light text-[13px]">
-                    {/* <div className="">ADD TO CART</div> */}
-                    <div className="text-[28px] hover:text-black">
-                      <TiShoppingCart />
-                    </div>
-                  </button>
-                </div>
-                <div className="flex items-center text-[1.3em]">
-                  <div className="mr-2 hover:text-slate-500">
-                    {" "}
-                    <FaRegHeart />{" "}
-                  </div>
-                  <div className="mr-2 text-[1.1em] hover:text-slate-500">
-                    {" "}
-                    <RiExchangeLine />{" "}
-                  </div>
-                </div>
-              </div>
-              <div className="flex bg-slate-300 font-normal justify-between text-[19px] px-2 py-2 mt-6">
-                <div
-                  className="flex items-center
-                                     "
-                >
-                  <div className="text-green-800 text-[1.2em] mr-1">
-                    {" "}
-                    <CiDollar />{" "}
-                  </div>
-                  Buy Now
-                </div>
-                <div className="flex items-center ">
-                  <div className="text-red-800 text-[1.2em] mr-1">
-                    <FaRegQuestionCircle />
-                  </div>{" "}
-                  Question
-                </div>
-              </div>
-            </div>
-            {/* third */}
-
-            <div className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 border-[1px] border-slate-300 shadow-[0px_0px_0px_0px_grey] ">
-              <div
-                className="absolute top-[34px] left-[-50px] text-[14px] bg-red-600 text-white text-center uppercase w-[200px] "
-                style={{ transform: "rotate(-45deg)" }}
-              >
-                2-3 days
-              </div>
-              <div className="absolute right-2  text-[9px] leading-3 top-2 ">
-                <div className="w-[60px] bg-orange-600 text-white px-2 py-1 flex justify-center mt-1 rounded-sm">
-                  Top Brand
-                </div>
-              </div>
-              <div className="overflow-hidden h-[100%] sm:h-[250px] ">
-                <img
-                  src={image3}
-                  alt=""
-                  className="overflow-hidden h-[100%] w-[100%] h-full object-cover"
-                />
-              </div>{" "}
-              <div className="flex justify-between bg-slate-200 text-slate-500 py-2 font-light text-[15px] px-1">
-                <div>Erickson</div>
-                <div>Model 519</div>
-              </div>
-              <div className="w-full text-[30px] flex justify-start font-normal mt-2 px-2">
-                Toshiba's Smart TV
-              </div>
-              <div className="font-light w-full text-start text-[16px] text-slate-500 px-2 mt-[10px]">
-                $999.00 <span className="text-[12px]  ">$3,299.00</span>{" "}
-              </div>
-              <div className="flex justify-between mt-[8px] px-3">
-                <div className="flex font-normal text-[17px]">
-                  <div className="text-[19px] w-[35px] py-1 border-[1px] border-slate-400 text-slate-700">
-                    1
-                  </div>
-                  <div className="bg-slate-300 font-light px-[px] ">
-                    <div className="hover:bg-slate-200">
-                      <FaAngleUp />
-                    </div>
-                    <div className="hover:bg-slate-200">
-                      {" "}
-                      <FaAngleDown />{" "}
-                    </div>
-                  </div>
-                  <button className="bg-blue-800 px-2 rounded-sm text-white font-light text-[13px]">
-                    {/* <div className="">ADD TO CART</div> */}
-                    <div className="text-[28px] hover:text-black">
-                      <TiShoppingCart />
-                    </div>
-                  </button>
-                </div>
-                <div className="flex items-center text-[1.3em]">
-                  <div className="mr-2 hover:text-slate-500">
-                    {" "}
-                    <FaRegHeart />{" "}
-                  </div>
-                  <div className="mr-2 text-[1.1em] hover:text-slate-500">
-                    {" "}
-                    <RiExchangeLine />{" "}
-                  </div>
-                </div>
-              </div>
-              <div className="flex bg-slate-300 font-normal justify-between text-[19px] px-2 py-2 mt-6">
-                <div
-                  className="flex items-center
-                                     "
-                >
-                  <div className="text-green-800 text-[1.2em] mr-1">
-                    {" "}
-                    <CiDollar />{" "}
-                  </div>
-                  Buy Now
-                </div>
-                <div className="flex items-center ">
-                  <div className="text-red-800 text-[1.2em] mr-1">
-                    <FaRegQuestionCircle />
-                  </div>{" "}
-                  Question
-                </div>
-              </div>
-            </div>
-
-            {/* fourth  */}
-
-            <div className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 border-[1px] border-slate-300 shadow-[0px_0px_0px_0px_grey] ">
-              <div
-                className="absolute top-[34px] left-[-50px] text-[14px] bg-red-600 text-white text-center uppercase w-[200px] "
-                style={{ transform: "rotate(-45deg)" }}
-              >
-                2-3 days
-              </div>
-              <div className="absolute right-2  text-[9px] leading-3 top-2 ">
-                <div className="w-[60px] bg-orange-600 text-white px-2 py-1 flex justify-center mt-1 rounded-sm">
-                  Top Brand
-                </div>
-              </div>
-              <div className="overflow-hidden h-[100%] sm:h-[250px] ">
-                <img
-                  src={image4}
-                  alt=""
-                  className="overflow-hidden h-[100%] w-[100%] h-full object-cover"
-                />
-              </div>{" "}
-              <div className="flex justify-between bg-slate-200 text-slate-500 py-2 font-light text-[15px] px-1">
-                <div>Erickson</div>
-                <div>Model 519</div>
-              </div>
-              <div className="w-full text-[30px] flex justify-start font-normal mt-2 px-2">
-                Leica Digital Camera
-              </div>
-              <div className="font-light w-full text-start text-[16px] text-slate-500 px-2 mt-[10px]">
-                $999.00 <span className="text-[12px]  ">$3,299.00</span>{" "}
-              </div>
-              <div className="flex justify-between mt-[8px] px-3">
-                <div className="flex font-normal text-[17px]">
-                  <div className="text-[19px] w-[35px] py-1 border-[1px] border-slate-400 text-slate-700">
-                    1
-                  </div>
-                  <div className="bg-slate-300 font-light px-[px] ">
-                    <div className="hover:bg-slate-200">
-                      <FaAngleUp />
-                    </div>
-                    <div className="hover:bg-slate-200">
-                      {" "}
-                      <FaAngleDown />{" "}
-                    </div>
-                  </div>
-                  <button className="bg-blue-800 px-2 rounded-sm text-white font-light text-[13px]">
-                    {/* <div className="">ADD TO CART</div> */}
-                    <div className="text-[28px] hover:text-black">
-                      <TiShoppingCart />
-                    </div>
-                  </button>
-                </div>
-                <div className="flex items-center text-[1.3em]">
-                  <div className="mr-2 hover:text-slate-500">
-                    {" "}
-                    <FaRegHeart />{" "}
-                  </div>
-                  <div className="mr-2 text-[1.1em] hover:text-slate-500">
-                    {" "}
-                    <RiExchangeLine />{" "}
-                  </div>
-                </div>
-              </div>
-              <div className="flex bg-slate-300 font-normal justify-between text-[19px] px-2 py-2 mt-6">
-                <div
-                  className="flex items-center
-                                     "
-                >
-                  <div className="text-green-800 text-[1.2em] mr-1">
-                    {" "}
-                    <CiDollar />{" "}
-                  </div>
-                  Buy Now
-                </div>
-                <div className="flex items-center ">
-                  <div className="text-red-800 text-[1.2em] mr-1">
-                    <FaRegQuestionCircle />
-                  </div>{" "}
-                  Question
-                </div>
-              </div>
-            </div>
-            {/* first  */}
-            <div className="bg-cover bg-center  w-[100%] sm:max-w-[90%]  min-w-[250px] sm:min-w-[48%]  flex items-center rounded-xl overflow-hidden justify-center text-black text-xl font-bold  relative  my-6 border-[1px] border-slate-300 shadow-[0px_0px_0px_0px_grey] ">
-              <div
-                className="absolute top-[34px] left-[-50px] text-[14px] bg-red-600 text-white text-center uppercase w-[200px] "
-                style={{ transform: "rotate(-45deg)" }}
-              >
-                2-3 days
-              </div>
-              <div className="absolute right-2  text-[9px] leading-3 top-2 ">
-                <div className="w-[60px] bg-orange-600 text-white px-2 py-1 flex justify-center mt-1 rounded-sm">
-                  Top Brand
-                </div>
-              </div>
-              <div className="overflow-hidden h-[100%] sm:h-[250px] ">
-                <img
-                  src={image5}
-                  alt=""
-                  className="overflow-hidden h-[100%] w-[100%] h-full object-cover"
-                />
-              </div>{" "}
-              <div className="flex justify-between bg-slate-200 text-slate-500 py-2 font-light text-[15px] px-1">
-                <div>Erickson</div>
-                <div>Model 519</div>
-              </div>
-              <div className="w-full text-[30px] flex justify-start font-normal mt-2 px-2">
-                Phone
-              </div>
-              <div className="font-light w-full text-start text-[16px] text-slate-500 px-2 mt-[10px]">
-                $999.00 <span className="text-[12px]  ">$3,299.00</span>{" "}
-              </div>
-              <div className="flex justify-between mt-[8px] px-3">
-                <div className="flex font-normal text-[17px]">
-                  <div className="text-[19px] w-[35px] py-1 border-[1px] border-slate-400 text-slate-700">
-                    1
-                  </div>
-                  <div className="bg-slate-300 font-light px-[px] ">
-                    <div className="hover:bg-slate-200">
-                      <FaAngleUp />
-                    </div>
-                    <div className="hover:bg-slate-200">
-                      {" "}
-                      <FaAngleDown />{" "}
-                    </div>
-                  </div>
-                  <button className="bg-blue-800 px-2 rounded-sm text-white font-light text-[13px]">
-                    {/* <div className="">ADD TO CART</div> */}
-                    <div className="text-[28px] hover:text-black">
-                      <TiShoppingCart />
-                    </div>
-                  </button>
-                </div>
-                <div className="flex items-center text-[1.3em]">
-                  <div className="mr-2 hover:text-slate-500">
-                    {" "}
-                    <FaRegHeart />{" "}
-                  </div>
-                  <div className="mr-2 text-[1.1em] hover:text-slate-500">
-                    {" "}
-                    <RiExchangeLine />{" "}
-                  </div>
-                </div>
-              </div>
-              <div className="flex bg-slate-300 font-normal justify-between text-[19px] px-2 py-2 mt-6">
-                <div
-                  className="flex items-center
-                                     "
-                >
-                  <div className="text-green-800 text-[1.2em] mr-1">
-                    {" "}
-                    <CiDollar />{" "}
-                  </div>
-                  Buy Now
-                </div>
-                <div className="flex items-center ">
-                  <div className="text-red-800 text-[1.2em] mr-1">
-                    <FaRegQuestionCircle />
-                  </div>{" "}
-                  Question
-                </div>
-              </div>
-            </div>
+            </div>)
+            }
+          
+           
           </Slider>
         </div>
         <div className="w-full flex justify-center my-10">
