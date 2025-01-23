@@ -30,8 +30,7 @@ function Body() {
      <People/>
      <Viewed/>
      <Social/>
-     <Footer/>
-     <Payment/>
+  
     </div>
   )
 }
