@@ -24,7 +24,7 @@ function Head() {
             <Route path="cart" element={<Cart />} />
             <Route path="Product/:id" element={<Product />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
     </Provider>
