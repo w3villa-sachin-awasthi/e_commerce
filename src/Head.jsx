@@ -16,7 +16,7 @@ function Head() {
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/"  element={<Login />} exact />
+          <Route path="/"  element={<Login />}  />
           <Route path="/register" element={<Register />} />
           <Route path="/home" element={<ProtectedRoute component={<App />} ></ProtectedRoute>}>
             <Route index element={<Body />} />
