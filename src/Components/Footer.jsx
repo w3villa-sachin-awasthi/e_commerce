@@ -31,7 +31,7 @@ function Footer() {
                 <a className="link link-hover">Newsletter</a>
                 <a className="link link-hover">Gift Certificates</a>
             </nav>
-            <form className='overflow-hidden w-[90%] sm:w-full'>
+            <form className='overflow-hidden w-[90%] sm:w-full' onSubmit={(e)=>{e.preventDefault();}}>
                 <h6 className="text-[15px] text-black ">Newsletter</h6>
                 <div className='h-[1.2px] bg-orange-600 hidden sm:block w-[50px] '></div>
                 <fieldset className="form-control w-80">
@@ -44,8 +44,8 @@ function Footer() {
                             type="text"
                             placeholder="Your email"
                             className="input input-bordered join-item h-full bg-white shadow-sm shadow-slate-300 shrink " />
-                        <button className="bg-blue-700 text-white px-2  border-0 max-h-full rounded-r-sm text-[13px]  flex justify-center items-center"> <FaRegEnvelope/> 
-                        <div className='ml-1'>Send</div></button>
+                        <button onClick={()=>alert('email sent successfully')} className="bg-blue-700 text-white px-2  border-0 max-h-full rounded-r-sm text-[13px]  flex justify-center items-center"> <FaRegEnvelope/> 
+                        <div className='ml-1' >Send</div></button>
                        
                     </div>
                     <div className="join h-[30px] mt-4">

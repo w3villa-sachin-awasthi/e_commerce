@@ -21,6 +21,11 @@ function Header() {
     navigate("/home/search");
     console.log(search)
   }
+  function handleSignOut(){
+    localStorage.removeItem("user")
+    alert("signOut successfully done !");
+    navigate('/');
+  }
   return (
     <div className="w-full sm:bg-slate-200 py-2">
       <div className="flex items-center  h-[60px] justify-between   max-w-[1600px]  mx-auto    px-3 md:px-5 lg:px-7 2xl:p-10 ">
@@ -57,9 +62,9 @@ function Header() {
           </ul>
         </div>
 
-        <div onClick={() => navigate('/')} className="md:flex w-auto lg:w-[20%] hidden text-slate-700">
+        <div  className="md:flex w-auto lg:w-[20%] hidden text-slate-700">
 
-          <div className="flex flex-col mx-2 hover:text-slate-950">
+          <div onClick={() => navigate('/')} className="flex flex-col mx-2 hover:text-slate-950">
             <div className="flex w-[100%] justify-center text-[24px] hover:text-[26px]">
               <FaUserCircle />
             </div>
@@ -84,7 +89,15 @@ function Header() {
             <div className="flex w-[100%] justify-center text-[24px] hover:text-[26px]">
               <RiExchangeLine />
             </div>
-            <div className="text-[13px] hover:text-[15px] text-center">Compare</div>
+            <div className="text-[13px]  hover:text-[15px] text-center">
+            <div className="dropdown">
+  <div tabIndex={0} role="button" className=" m-1">SignOut</div>
+  <ul tabIndex={0} className="dropdown-content bg-slate-800  rounded-box z-[1] w-[80px] text-white p-2 shadow">
+    <li onClick={handleSignOut}>Click</li> 
+   
+  </ul>
+</div>
+            </div>
           </div>
         </div>
 
@@ -132,19 +145,19 @@ function Header() {
                   <FaSearch className="" />
                 </li>
               </li>
-              <li onClick={()=>{
-                 setIsMenuOpen(false);
+              <li onClick={() => {
+                setIsMenuOpen(false);
                 navigate("/home")
               }} className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900">
                 Home
               </li>
-              <li className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900">
+              <li onClick={() => { navigate("/") }} className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900">
                 Login
               </li>
-              <li className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900">
+              <li onClick={() => { navigate("/register") }} className="text-center text-[16px] my-2 bg-slate-700 text-white rounded-md p-2 hover:bg-slate-900">
                 Register
               </li>
-             
+
 
               <button
                 className="text-white text-[25px] w-full text-center hover:text-[27px] hover:box-border"

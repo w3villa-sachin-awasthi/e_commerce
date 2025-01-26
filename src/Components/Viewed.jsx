@@ -64,11 +64,11 @@ function Viewed() {
                                <div className='text-[16px] text-red-500 font-light sm:font-normal'>
                                 $399.00
                                </div>
-                               <div className='flex w-[50%] sm:w-[55%] justify-between sm:text-[23px] text-slate-700    sm:mt-[4px] sm:ml-2 mb-2'>
+                               {/* <div className='flex w-[50%] sm:w-[55%] justify-between sm:text-[23px] text-slate-700    sm:mt-[4px] sm:ml-2 mb-2'>
                                 <TiShoppingCart/>
                                 <CiHeart/>
                                 <RiExchangeLine/>
-                               </div>
+                               </div> */}
                 </div>
             
               </div>

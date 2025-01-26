@@ -10,20 +10,24 @@ function Product() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const allProducts = useSelector(state => state.allProduct.value);
-    console.log(id," product ",allProducts)
+    // console.log(id," product ",allProducts)
     useEffect(() => {
         const fetchProduct = async () => {
+
             if(id>=30&&id<=34){
+            
              for(let i=0;i<productCategory.length;i++){
-                if(productCategory[i].id==id){
-                     console.log("mil gaya")
+               
+                if(productCategory[i].id===Number(id)){
+                    
                      setProduct(productCategory[i]);
                      return ;
                 }
-                 console.log("try again ")
-                return ;
+               
              }
-               setProduct(productCategory[id]);
+             console.log("try again ")
+             return ;
+            //    setProduct(productCategory[id]);
             }
             if (id && allProducts.length > 0) {
                 const selectedProduct = allProducts.find(product => product.id === parseInt(id));
