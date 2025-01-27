@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Loader from './Loader';
 import { productCategory } from '../Config/data';
+import { fdata } from '../Config/data2';
 function Product() {
     const [product, setProduct] = useState(null);
     const { id } = useParams();
@@ -29,6 +30,22 @@ function Product() {
              return ;
             //    setProduct(productCategory[id]);
             }
+            if(id>=41&&id<=44){
+            
+                for(let i=0;i<fdata.length;i++){
+                  
+                   if(fdata[i].id===Number(id)){
+                       
+                        setProduct(fdata[i]);
+                        return ;
+                   }
+                  
+                }
+                console.log("try again ")
+                return ;
+               //    setProduct(productCategory[id]);
+               }
+
             if (id && allProducts.length > 0) {
                 const selectedProduct = allProducts.find(product => product.id === parseInt(id));
               
@@ -57,11 +74,11 @@ function Product() {
         <div className="container mx-auto px-4 py-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                <div className="flex justify-center h-[400px] sm:h-auto">
+                <div className="flex justify-center  h-[400px] sm:h-auto">
                     <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full max-w-xs md:max-w-md rounded-lg shadow-lg"
+                        className="w-full h-full max-w-xs md:max-w-md rounded-lg shadow-lg object-cover object-center" 
                     />
                 </div>
 

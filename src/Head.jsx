@@ -19,12 +19,12 @@ function Head() {
           <Route path="/"  element={<Login />}  />
           <Route path="/register" element={<Register />} />
           <Route path="/home" element={<ProtectedRoute component={<App />} ></ProtectedRoute>}>
-            <Route index element={<Body />} />
+            <Route path="" element={<Body />} />
             <Route path="search" element={<Search />} />
             <Route path="cart" element={<Cart />} />
             <Route path="Product/:id" element={<Product />} />
           </Route>
-          {/* <Route path="*" element={<NotFound />} /> */}
+       
         </Routes>
       </BrowserRouter>
     </Provider>

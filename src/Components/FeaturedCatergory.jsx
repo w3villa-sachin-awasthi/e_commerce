@@ -16,31 +16,21 @@ import { FaRegQuestionCircle } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 import axios from "axios";
 import { featuredCategorySection as settings } from "../Config/data";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { selectProduct } from "../Config/redux/slices.js/product";
+import { fdata as data } from "../Config/data2";
 function FeaturedCatergory() {
 
-   let data = [
-    { img: image2, content: "Bodycorn Dress", price: "$1099.00", model: "222" },
-    {
-      img: image3,
-      content: "Black Lace Dress",
-      price: "$899.00",
-      model: "820",
-    },
-    {
-      img: image4,
-      content: "Jacob Turtleneck Sweater",
-      price: "$699.00",
-      model: "402",
-    },
-    {
-      img: image5,
-      content: "Black Vintage T-shirt",
-      price: "$1999.00",
-      model: "210",
-    },
-  ];
 
- 
+
+  const dispatch=useDispatch();
+   const navigate=useNavigate();
+    function handleModal(val) {
+      dispatch(selectProduct(val));
+  
+      navigate(`/home/product/${val.id}`);
+    }
 
   return (
    
@@ -95,12 +85,13 @@ function FeaturedCatergory() {
             {data.map((val, index) => (
               <div
                 key={index}
-                className="bg-cover bg-center max-w-[90%]  min-w-[95%] sm:max-w-[270px] sm:min-w-[270px] flex pb-10 text-xl font-bold mt-[20px] sm:nt-auto relative  border-[1.5px] rounded-sm border-slate-200 mb-10 overflow-hidden"
+                className="bg-cover bg-center max-w-[90%]  min-w-[95%] sm:max-w-[270px] sm:min-w-[270px] flex pb-10 text-xl font-bold mt-[20px] sm:nt-auto relative  border-[1.5px] rounded-sm border-slate-200 mb-10 overflow-hidden
+                shadow-sm hover:shadow-slate-500 "
               >
                 <div    className="overflow-hidden object-cover   sm:h-[250px] mx-auto"
                 >
                <img
-                  src={val.img}
+                  src={val.image}
                   alt=""
                 className="w-full"
                 />
@@ -108,7 +99,7 @@ function FeaturedCatergory() {
                
                 {/* Content */}
                 <div className="w-full flex justify-start font-normal mt-2 px-2 text-[12px] sm:text-[15px] overflow-hidden whitespace-nowrap text-ellipsis  ">
-                  {val.content}
+                  {val.title}
                 </div>
                 {/* Price */}
                 <div className="font-light w-full text-start text-[10px] sm:text-[14px] px-2 mt-[-7px]">
@@ -117,15 +108,15 @@ function FeaturedCatergory() {
                 {/* Buttons */}
                 <div className="flex justify-between mt-[8px] px-2">
                   <div className="flex font-normal text-[13px] sm:text-[15px]">
-                    <button className="bg-blue-800 px-2 rounded-sm text-white font-light text-[9px] sm:text-[13px] overflow-hidden whitespace-nowrap text-ellipsis hover:text-black">
+                    <button  onClick={(e) => handleModal(val)} className="bg-blue-800 px-2 rounded-sm text-white font-light text-[9px] sm:text-[13px] overflow-hidden whitespace-nowrap text-ellipsis hover:bg-white hover:text-black">
                       ADD TO CART
                     </button>
                   </div>
                   <div className="flex items-center text-slate-700">
-                    <div className="md:mr-6 mr-2 hover:text-black">
+                    <div className="md:mr-6 mr-2 hover:text-red-600">
                       <FaRegHeart />
                     </div>
-                    <div className="md:mr-4 mr-2 hover:text-black">
+                    <div className="md:mr-4 mr-2 hover:text-green-200">
                       <RiExchangeLine />
                     </div>
                   </div>
